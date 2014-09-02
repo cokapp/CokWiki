@@ -1,0 +1,22 @@
+{
+    "name": "NodeMVC",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node ./index"
+    },
+    "dependencies": {
+        "express": "latest",
+        "showdown": "latest",
+        "static-favicon": "~1.0.0",
+        "cookie-parser": "~1.0.1",
+        "body-parser": "~1.0.0",
+        "ejs": "~0.8.5",
+        "express-partials": "latest",
+        "log4js": "latest",
+        "async": "latest"
+    }
+}
+
+
+    
