@@ -1,38 +1,47 @@
+---
+layout: post
+title: Blogging Like a Hacker
+tags: 啊,不,额,非
+---
 
 
-This is a sample page.
+# 标题一
+## 标题二
 
-The `front-matter` of this page is:
+> 这是一个段落，
+只加了一个引用符号
 
-	layout: page
-	title: Sample Page
-	comments: true
-	date: 2013-06-23 11:20
-	sidebar: false
-	xyz: "This is a custom text."
+无序列表：
 
-Variable output:
+* 列表
+* 李彪
+* 猎豹
+* Red
+* Green
+* Blue
 
-	${'$'}{site.url} = ${site.url}
-	${'$'}{page.layout} = ${page.layout}
-	${'$'}{page.title} = ${page.title}
-	${'$'}{page.comments} = ${page.comments?string}
-	${'$'}{page.date} = ${page.date?datetime}
-	${'$'}{page.sidebar} = ${page.sidebar?string}
-	${'$'}{page.xyz} = ${page.xyz}
+有序列表:
+
+1. 说说
+4. asasfd
+
+sd
+
+---
+
+    function jread(){
+        alert('what a stupid people!');
+    }
+
+---
+
+Here is an example of AppleScript:
+
+    tell application "Foo"
+        beep
+    end tell
 
 
-A java code block here:
+This is [wiki](wiki/hello/wiki "Title") inline link.
 
-~~~java
-import org.opoo.press.Plugin;
-import org.opoo.press.Site;
-
-public class MyPlugin implements Plugin{
-	//Construct MyPlugin
-	public void initialize(Site site){
-		//
-	}
-}
-~~~
-
+![麻烦](http://cokcdn.qiniudn.com/mafan.png)

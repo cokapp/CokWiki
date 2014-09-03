@@ -1,0 +1,22 @@
+<div class="ui menu">
+    <a class="item" ng-href="#/"
+        ng-class="{active: ctrl=='index'}">
+        <i class="home icon"></i> 主页
+    </a>
+    <a class="item" ng-href="#/clipboard/list"
+        ng-class="{active: ctrl=='clipboard'}">
+        <i class="mail icon"></i> 剪贴板
+    </a>
+    <a class="item" ng-href="#/about"
+        ng-class="{active: ctrl=='about'}">
+        <i class="users icon"></i> 关于
+    </a>
+    <div class="right menu">
+        <div class="item">
+            <div class="ui icon input">
+                <input type="text" placeholder="搜索中...">
+                <i class="search link icon"></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+	<%if(!model.exists){%>
+		<form method='POST'>
+			<textarea name="source"></textarea>
+			<input type='submit' value='提交' />
+		</form>
+	<%}else{%>
+		<div>
+			<%-model.content%>
+		</div>
+	<%}%>

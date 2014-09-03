@@ -7,6 +7,9 @@ module.exports = function(app){
 
 //请求分发器
 function dispatcher(req, res, next){
+    //url解码
+    req.url = decodeURI(req.url);
+
     var request_url = gb.url.parse(req.url).pathname;
 
     var mappedUrlPath = request_url;

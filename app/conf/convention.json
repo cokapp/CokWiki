@@ -1,11 +1,10 @@
 {
-	"APP_NAME" : "Node Wiki",
+    "APP_NAME": "Node Wiki",
 
-    "DIR" : {
-        "DATA" : "/_datas"
+    "DIR": {
+        "DATA": "_datas",
+        "STATIC": "asserts",
+        "VIEWS" : "views/default"
     }
 
 }
-
-
-

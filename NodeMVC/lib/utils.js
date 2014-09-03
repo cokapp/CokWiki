@@ -57,7 +57,7 @@ utils.loadConf = function(appRoot) {
     gb.config = allConf;
     gb.config.__ENV.APP_PATH = appRoot;
     gb.config.__ENV.ROOT = gb.path.join(__dirname, '../../');
-    gb.config.__ENV.APP_ROOT = gb.config.__ENV.ROOT + gb.config.__ENV.APP_PATH;
+    gb.config.__ENV.APP_ROOT = gb.path.join(gb.config.__ENV.ROOT, gb.config.__ENV.APP_PATH);
 
     gb.logger.info('APP GLOBAL ENV');
     gb.logger.info(gb.config);

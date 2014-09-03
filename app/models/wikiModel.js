@@ -1,29 +1,68 @@
-var Showdown = require('showdown');
-var converter = new Showdown.converter();
+var yml = require('../lib/yml');
+var markdown = require('markdown').markdown;
 
 var Model = Class.extend({
-	title: null,
-	intro: null,	
-	tags: null,
+    exists: false,
+    url: null,
 
-	url: null,
-	content: null,
+    title: null,
+    intro: null,
+    tags: null,
+    source: null,
 
-	loadMD: function(url){
-		var _this = this;
+    meta: null,
+    content: null,
 
-		_this.url = url;
+    getFile: function() {
+        var _this = this;
 
-		var dataFolder = gb.path.join(gb.config.__ENV.ROOT, '_datas'); 
+        var dataFolder = gb.path.join(gb.config.__ENV.ROOT, gb.config.DIR.DATA);
 
-		var md = gb.fs.readFileSync(gb.path.join(dataFolder, _this.url + '.md')).toString();
+        var file = gb.path.join(dataFolder, _this.url + '.md');
 
-		_this.content = converter.makeHtml(md);
-	},
+        return file;
+    },
 
-	init: function(){
 
-	}
+
+    load: function(url) {
+        var _this = this;
+
+        _this.url = url;
+
+        var file = _this.getFile();
+
+        //存在目标文件
+        if (gb.fs.existsSync(file)) {
+            _this.exists = true;
+
+            var mdStr = gb.fs.readFileSync(file).toString();
+
+            var md = yml.split(mdStr);
+            _this.source = md;
+
+            _this.content = markdown.toHTML(md.content);
+            _this.meta = yml([md.data, '---', ''].join('\n'));
+
+            _this.title = _this.meta.title;
+            _this.intro = _this.meta.intro;
+            _this.tags = _this.meta.tags;
+
+        }
+    },
+
+    init: function() {
+        var _this = this;
+    },
+
+    save: function() {
+        var _this = this;
+        //TODO合理转换为Markdown文本
+        var data = _this.source;
+        var file = _this.getFile();
+
+        require('xfs').sync().save(file, data);
+    }
 
 
 });

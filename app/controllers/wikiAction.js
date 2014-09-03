@@ -1,13 +1,22 @@
 var Handler = gb.AbstractHandler.extend({
-	HandlerRegExp :/^\/.*/i,
-	doAll : function() {
-		var _this = this;
+    HandlerRegExp: /^\/.*/i,
+    doGet: function() {
+        var _this = this;
 
-		var target = _this.para.urlPara[0];
-		_this.model.loadMD(target);
+        var url = _this.para.urlPara[0];
+        _this.model.load(url);
 
-		this.render();
-	}
+        this.render();
+    },
+    doPost: function() {
+        var _this = this;
+
+        _this.model.url = _this.para.urlPara[0];
+        _this.model.save();
+        _this.model.load(_this.model.url);
+
+        this.render();
+    }
 
 });
 

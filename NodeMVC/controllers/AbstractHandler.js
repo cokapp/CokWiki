@@ -16,27 +16,34 @@ var Handler = Class.extend({
         //step.1 参数处理
         this.para = this._reqestParse(req, res);
         //step.2 模型映射
-        this._modelMap();
+        this._initModel();
         //step.3 正式处理Http请求
         this._dohand();
     },
-    _modelMap: function(){
+    _initModel: function(){
         var _this = this;
 
         var appRoot = gb.config.__ENV.APP_ROOT;
-        var Model = require(gb.path.join(appRoot, 'models/' + _this.HandlerName + 'Model'));
-        _this.model = new Model();
+        try{
+            var Model = require(gb.path.join(appRoot, 'models/' + _this.HandlerName + 'Model'));
+            _this.model = new Model();  
+        }catch(e){
+            gb.logger.info(e);
+            gb.logger.info('未定义模型：%s', _this.HandlerName);
+            _this.model = {};
+            return;
+        }
 
         //简单的自动映射
         for(var i in _this.model){
-            if(typeof _this.para.req.params[i] === 'undefined'){
-                return;
+            if(typeof _this.para.req.param(i) === 'undefined'){
+                continue;
             }
-            _this.model[i] = _this.para.req.params[i];
+            _this.model[i] = _this.para.req.param(i);
         }
 
-        if(_this.modelMap){
-            _this.modelMap();
+        if(_this.initModel){
+            _this.initModel();
         }
     },
     _reqestParse: function (req, res) {
@@ -51,6 +58,7 @@ var Handler = Class.extend({
             urlPara: urlPara,
             query: req.query,
             body: req.body,
+            params: req.params,
             req: req,
             res: res
         };
@@ -58,13 +66,15 @@ var Handler = Class.extend({
                 '\r\n pathName: %s ' +
                 '\r\n mappedPathName: %s ' +
                 '\r\n urlPara: %s ' +
+                '\r\n query: %s ' +
                 '\r\n body: %s ' +
-                '\r\n query: %s \r\n '
+                '\r\n params: %s \r\n '
             , parsedUrl.pathname
             , para.pathName
             , JSON.stringify(para.urlPara)
+            , JSON.stringify(para.query)
             , JSON.stringify(para.body)
-            , JSON.stringify(para.query));
+            , JSON.stringify(para.params));
 
         return para;
     },
@@ -122,7 +132,7 @@ var Handler = Class.extend({
     preDoAll: null,
 
     doAuth: null,
-    modelMap: null,
+    initModel: null,
     render: function (tpl, rsp) {
         var _this = this;
 

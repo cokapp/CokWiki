@@ -42,6 +42,7 @@ NodeMVC.startup = function(callback){
 
     //static dir
     app.use('/' + gb.config.DIR.STATIC, express.static(gb.path.join(NodeMVC.APP_PATH, gb.config.DIR.STATIC)));
+    
     app.use(favicon());
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded());
