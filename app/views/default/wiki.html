@@ -1,8 +1,38 @@
-	<%if(!model.exists){%>
-		<form method='POST'>
-			<textarea name="source"></textarea>
-			<input type='submit' value='提交' />
+
+
+<div class="ui breadcrumb">
+
+<%
+var url = model.url.substring(1, model.url.length);
+var breadcrumbs = url.split('/');
+var breadnum = breadcrumbs.length;
+var baseBreadcrumb = '';
+
+for(var i=0; i<breadnum-1; i++){
+	var breadcrumb = breadcrumbs[i];
+	baseBreadcrumb += '/' + breadcrumb;
+%>
+    <a href="<%-baseBreadcrumb%>" class="section"><%-breadcrumb%></a>
+    <i class="right arrow icon divider"></i>
+<%
+}
+%>
+	<div class="active section"><%-breadcrumbs[breadnum-1]%></div>
+
+</div>
+
+
+
+	<%if(model.edit !== false){%>
+		<form method="post" action="<%-model.url%>">
+		    <div class="ui form">
+		        <div class="field">
+		            <textarea name="source"><%-model.source%></textarea>
+		        </div>
+		        <input type="submit" class="ui blue submit button" value="提 交" />
+		    </div>
 		</form>
+
 	<%}else{%>
 		<div>
 			<%-model.content%>

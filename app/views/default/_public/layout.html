@@ -8,24 +8,22 @@
 </head>
 <body>
 
-  <div class="header_wrapper">
-    <div class="wrapper">
-      <% include header.html %>
-    </div>   
-  </div>
-
-  <div class="body_wrapper"> 
-    <div class="wrapper">
-      <%- body.html %>  
+<div class="body-wrapper">
+    <div class="sidebar">
+        <% include sidebar.html %>
     </div>
-  </div>
-
-  <div class="foot_wrapper">
-    <div class="wrapper">
-      <% include footer.html %>
-    </div>  
-  </div>
-
+    <div class="main">
+      <div class="header-wrapper">
+        <% include header.html %>
+      </div>
+      <div class="body-wrapper">
+        <%- body %>
+      </div>
+      <div class="footer-wrapper">
+        <% include footer.html %>
+      </div>
+    </div>
+</div>
   
 </body>
 </html>

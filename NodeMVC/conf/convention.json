@@ -7,7 +7,10 @@
         "MODELS" : "models",
         "VIEWS" : "views",
         "CONTROLLERS" : "controllers",
-        "STATIC" : "static"
+        "STATIC" : {
+            "static": "static",
+            "views": "views"
+        }
     },
     "VIEW_SUFFIX" : "html",
     "COOKIE_SECRET" : "node mvc",

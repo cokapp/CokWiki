@@ -39,6 +39,7 @@ var Handler = Class.extend({
             if(typeof _this.para.req.param(i) === 'undefined'){
                 continue;
             }
+            console.log('%s=%s',i,_this.para.req.param(i));
             _this.model[i] = _this.para.req.param(i);
         }
 

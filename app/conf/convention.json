@@ -3,8 +3,11 @@
 
     "DIR": {
         "DATA": "_datas",
-        "STATIC": "asserts",
-        "VIEWS" : "views/default"
+        "VIEWS" : "views/default",
+        "STATIC" : {
+            "asserts": "asserts",
+            "views": "views"
+        }        
     }
 
 }

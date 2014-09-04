@@ -3,6 +3,7 @@ var markdown = require('markdown').markdown;
 
 var Model = Class.extend({
     exists: false,
+    edit: false,
     url: null,
 
     title: null,
@@ -39,7 +40,7 @@ var Model = Class.extend({
             var mdStr = gb.fs.readFileSync(file).toString();
 
             var md = yml.split(mdStr);
-            _this.source = md;
+            _this.source = mdStr;
 
             _this.content = markdown.toHTML(md.content);
             _this.meta = yml([md.data, '---', ''].join('\n'));

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于
+title: 关于-已修改2sdf
 comments: true
 date: 2013-06-23 11:20
 intro: 一些关于本站的介绍
