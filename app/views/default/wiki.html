@@ -1,29 +1,5 @@
 
-
-<div class="ui breadcrumb">
-
-<%
-var url = model.url.substring(1, model.url.length);
-var breadcrumbs = url.split('/');
-var breadnum = breadcrumbs.length;
-var baseBreadcrumb = '';
-
-for(var i=0; i<breadnum-1; i++){
-	var breadcrumb = breadcrumbs[i];
-	baseBreadcrumb += '/' + breadcrumb;
-%>
-    <a href="<%-baseBreadcrumb%>" class="section"><%-breadcrumb%></a>
-    <i class="right arrow icon divider"></i>
-<%
-}
-%>
-	<div class="active section"><%-breadcrumbs[breadnum-1]%></div>
-
-</div>
-
-
-
-	<%if(model.edit !== false){%>
+	<%if(model.opera === 'edit'){%>
 		<form method="post" action="<%-model.url%>">
 		    <div class="ui form">
 		        <div class="field">
@@ -32,8 +8,11 @@ for(var i=0; i<breadnum-1; i++){
 		        <input type="submit" class="ui blue submit button" value="提 交" />
 		    </div>
 		</form>
-
-	<%}else{%>
+	<%}else if(model.opera === 'discuss'){%>
+		<div>
+			discuss
+		</div>
+	<%}else if(model.opera === 'view'){%>
 		<div>
 			<%-model.content%>
 		</div>

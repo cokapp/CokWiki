@@ -8,7 +8,7 @@
     "dependencies": {
         "express": "latest",
         "js-yaml": "latest",
-        "markdown": "latest",
+        "showdown": "latest",
         "xfs": "latest",
         "static-favicon": "~1.0.0",
         "cookie-parser": "~1.0.1",

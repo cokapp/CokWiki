@@ -1,9 +1,13 @@
-var yml = require('../lib/yml');
-var markdown = require('markdown').markdown;
+var yml = require('../lib/yml'),
+
+    Showdown       = require('showdown'),
+    ghostgfm       = require('../lib/showdown/extensions/ghostgfm'),
+    converter      = new Showdown.converter({extensions: [ghostgfm]});
 
 var Model = Class.extend({
+    opera: 'view',
+
     exists: false,
-    edit: false,
     url: null,
 
     title: null,
@@ -42,7 +46,8 @@ var Model = Class.extend({
             var md = yml.split(mdStr);
             _this.source = mdStr;
 
-            _this.content = markdown.toHTML(md.content);
+            _this.content = converter.makeHtml(md.content);
+
             _this.meta = yml([md.data, '---', ''].join('\n'));
 
             _this.title = _this.meta.title;

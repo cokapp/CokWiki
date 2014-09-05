@@ -6,8 +6,6 @@ var Handler = gb.AbstractHandler.extend({
         var url = _this.para.urlPara[0];
         _this.model.load(url);
 
-        console.log(_this.model);
-
         this.render();
     },
     doPost: function() {

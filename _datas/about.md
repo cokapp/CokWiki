@@ -1,13 +1,56 @@
 ---
 layout: page
-title: 关于-已修改2sdf
+title: 关于
 comments: true
 date: 2013-06-23 11:20
 intro: 一些关于本站的介绍
 tags: 啊,不,从,的
 ---
 
+#关于
 
+```java
+for (int i=0;i<10;i++){
+  new Thread(new Runnable() {
+      @Override
+      public void run() {
+          Thread.currentThread().interrupt();
+          for(int j = 0;j<20;j++){
+              try {
+                  System.out.println("i = " + t.getAndIn());
+                  Thread.sleep(100);
+              } catch (Exception e) {
+                  System.out.println("e = " + e);
+              }
+          }
+      }
+  }).start();
+}
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>I can haz embedded CSS and JS</title>
+	<style>
+		@media print {
+			p { color: red !important; }
+		}
+	</style>
+</head>
+<body>
+	<h1>I can haz embedded CSS and JS</h1>
+	<script>
+	if (true) {
+		console.log('foo');
+	}
+	</script>
+
+</body>
+</html>
+```
 
 
 只挑最靠谱的介绍。时间过得真快，Markdown已经生态链极其成熟。
