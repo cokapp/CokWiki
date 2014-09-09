@@ -1,0 +1,19 @@
+<div class="ui pointing menu fixed">
+    <a class="item <%if(model.opera === 'view'){%>active<%}%>" href="<%=model.url%>">
+        <i class="home icon"></i> 浏览
+    </a>
+    <a class="item <%if(model.opera === 'discuss'){%>active<%}%>" href="<%=model.url%>?opera=discuss">
+        <i class="comment icon"></i> 讨论
+    </a>
+    <a class="item <%if(model.opera === 'edit'){%>active<%}%>" href="<%=model.url%>?opera=edit">
+        <i class="edit sign icon"></i> 编辑
+    </a>
+    <div class="right menu">
+        <div class="item">
+            <div class="ui icon input">
+                <input type="text" placeholder="搜索...">
+                <i class="search link icon"></i>
+            </div>
+        </div>
+    </div>
+</div>

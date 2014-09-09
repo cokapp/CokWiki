@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= model.title %></title>
+  <% include head.html %>
+</head>
+<body>
+
+<div class="container">
+    <div class="navigation">
+      <% include sidebar.html%>
+    </div>
+
+    <div class="main">
+        <div class="header-wrapper">
+            <% include header.html %>
+        </div>
+        <div class="content-wrapper wikistyle">
+            <%- body %>
+        </div>
+        <div class="footer-wrapper">
+            <% include footer.html %>
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>

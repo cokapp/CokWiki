@@ -1,0 +1,12 @@
+{
+    "APP_NAME": "Node Wiki",
+
+    "DIR": {
+        "DATA": "../content/data",
+        "VIEWS" : "../content/themes/simple",
+        "STATIC" : {
+            "asserts": "../content/themes/simple/asserts"
+        }        
+    }
+
+}

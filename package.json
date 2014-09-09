@@ -1,24 +1,19 @@
 {
-    "name": "NodeMVC",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node ./index"
+    "name": "cokwiki",
+    "description": "a tiny wiki application based on cokmvc!",
+    "version": "0.0.1dev",
+    "author": {
+        "name": "bladin",
+        "email": "dev@cokapp.com",
+        "url": "http://dev.cokapp.com"
     },
+    "main": "index",
     "dependencies": {
-        "express": "latest",
+        "cokmvc": "latest",
         "js-yaml": "latest",
-        "showdown": "latest",
         "xfs": "latest",
-        "static-favicon": "~1.0.0",
-        "cookie-parser": "~1.0.1",
-        "body-parser": "~1.0.0",
-        "ejs": "~0.8.5",
-        "express-partials": "latest",
-        "log4js": "latest",
-        "async": "latest"
-    }
+        "showdown": "latest"
+    },
+    "repository": "git://github.com/cokapp/nodemvc",
+    "engines": { "node": "*" }
 }
-
-
-    

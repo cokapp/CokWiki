@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= model.title %></title>
+    <% include head.html %>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="sidebar col-1 col-md-3">
+        <div class="header">
+            <h1 class="brand-title">A Sample Blog</h1>
+            <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://purecss.io">Pure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://yuilibrary.com">YUI Library</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content col-1 col-md-9">
+        <div class="main">
+            <div class="header-wrapper">
+                <% include header.html %>
+            </div>
+            <div class="content-wrapper wikistyle">
+                <%- body %>
+            </div>
+            <div class="footer-wrapper">
+                <% include footer.html %>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+</body>
+</html>
