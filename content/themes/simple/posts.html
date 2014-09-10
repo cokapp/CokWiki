@@ -1,0 +1,15 @@
+<ul>
+<%
+var allposts = shelf.db('urlmap').value();
+
+for(var i in allposts){
+	var post = allposts[i];
+
+	var title = post.meta.title || 'null';
+%>
+	<li> <a href="<%-post.url%>" title="<%-title%>"><%-title%></a></li>
+<%
+}
+%>
+</ul>
+

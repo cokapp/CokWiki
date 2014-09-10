@@ -12,6 +12,7 @@
         "cokmvc": "latest",
         "js-yaml": "latest",
         "xfs": "latest",
+        "lowdb": "latest",
         "showdown": "latest"
     },
     "repository": "git://github.com/cokapp/nodemvc",

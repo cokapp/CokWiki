@@ -1,6 +1,7 @@
 {
     "URL_MAPPING" : {
         "^$":"/index",
+        "^posts$":"/posts",
         "^(.*)$":"$1"
     }
 }

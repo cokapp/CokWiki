@@ -1,19 +1,19 @@
 
-	<%if(model.opera === 'edit'){%>
-		<form method="post" action="<%-model.url%>">
-		    <div class="ui form">
-		        <div class="field">
-		            <textarea name="source"><%-model.source%></textarea>
-		        </div>
-		        <input type="submit" class="ui blue submit button" value="提 交" />
-		    </div>
-		</form>
-	<%}else if(model.opera === 'discuss'){%>
-		<div>
-			discuss
-		</div>
-	<%}else if(model.opera === 'view'){%>
-		<div>
-			<%-model.content%>
-		</div>
-	<%}%>
+<%if(model.opera === 'edit'){%>
+	<form method="post" action="<%-model.url%>">
+	    <div class="ui form">
+	        <div class="field">
+	            <textarea name="source"><%-model.source%></textarea>
+	        </div>
+	        <input type="submit" class="ui blue submit button" value="提 交" />
+	    </div>
+	</form>
+<%}else if(model.opera === 'discuss'){%>
+	<div>
+		discuss
+	</div>
+<%}else if(model.opera === 'view'){%>
+	<div>
+		<%-model.content%>
+	</div>
+<%}%>

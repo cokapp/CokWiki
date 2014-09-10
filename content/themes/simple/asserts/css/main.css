@@ -1,3 +1,4 @@
+
 body, ul, li{
 	padding: 0;
 	margin: 0;
@@ -7,26 +8,64 @@ ul, li {
 	line-height: 1.5;
 }
 
-.clearfix() {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+  display: table;
+  width: 100%;
+}
+.hidden{
+	display: none;
 }
 
+/*layout*/
+html{
+	background: #eee;
+	min-width: 480px;
+}
+.navigation{
+	background: #fff;
+}
+.main{
+	padding: 20px;
+}
+.content-wrapper, .header-wrapper{
+	background: #fff;
+}
+
+/*edit*/
+textarea[name='source']{
+	height: auto !important;
+	min-height:400px !important;
+}
 
 /*响应式设计*/
 
 /*默认显示上导航*/
 @media screen and (max-width: 800px){
+	.header-wrapper{
+		margin-top: 50px;
+	}
+	.navigation{
+		z-index: 1000;
+		position: fixed;
+		width: 100%;
+		min-width: 480px;
+	}
 	.navigation ul{
 		padding: 5px;
-		background: #ddd;
 	}
+	.navigation > ul > li{
+		margin-right: 10px;
+		height: 50px;
+		line-height: 50px;
+		float: left;
+	}	
 	.navigation .logo img{
 		width: 50px;
 		height: 50px;
@@ -34,19 +73,34 @@ ul, li {
 	.navigation .title{
 		display: none;
 	}
-	.navigation li{
-		float: left;
-		margin-right: 10px;
+	.navigation .goto{
+
 	}
+	.navigation .menus-toggle{
+		float: right;
+	}
+	.navigation .menus{
+		padding: 0;
+		margin: 0;
+	}
+	.navigation .menus li a{
+		display: block;
+		text-align: center;
+		margin: 5px;
+		background: #ccc;
+	}
+	.main{
+		padding: 20px 0;
+	}	
 }
 
 /*宽度大于800px时，显示左侧栏*/
 @media screen and (min-width: 800px){
 	.navigation{
-		width: 200px;
+		position: fixed;		
+		width: 170px;
 		float: left;
-		padding: 20px 5px;
-		background: #ddd;
+		padding: 20px;
 	}
 	.navigation .logo{
 		text-align: center;
@@ -58,8 +112,14 @@ ul, li {
 	.navigation .menus{
 		list-style: none;
 		line-height: 1.5;
-		margin-left: 20px;
+		display: block !important;
+	}
+	.navigation .menus-toggle{
+		display: none;
 	}	
+	.header-wrapper{
+		margin-top: 0px !important;
+	}
 	.main{
 		margin-left: 210px;
 	}

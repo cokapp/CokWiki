@@ -1,6 +1,9 @@
 var Handler = gb.AbstractHandler.extend({
 	doAll : function() {
-		this.render();
+		this.render({
+			// indexing: gb.indexing.data,
+			shelf: gb.shelf
+		});
 	}
 });
 

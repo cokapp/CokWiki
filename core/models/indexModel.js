@@ -27,21 +27,20 @@ var Model = Class.extend({
 	init: function(file){
 		var _this = this;
 
-		_this.data.path = gb.path.join(gb.config.__ENV.ROOT, '_datas');
+		_this.data.path = gb.path.join(gb.config.__ENV.APP_ROOT, gb.config.DIR.DATA);
 
 		if(typeof file == 'undefined'){
 			file = 'index.json';
 		}
 		
 		_this.data.file = gb.path.join(_this.data.path, file);
-
-		console.log(_this.data.file);
-
-		_this.reload();
 	},
 	//从源文件重建索引
 	rebuild: function(){
 		var _this = this;
+
+		_this.data.urlmap = {};
+		_this.data.tagmap = {};
 
 		var allMDs = gb.fileutil.readAllFile(_this.data.path);
 
@@ -56,8 +55,6 @@ var Model = Class.extend({
 	        var url = md.replace(_this.data.path, '').replace('.md', '');
 	        _this.put(url);
 		}
-
-
 	},
 	//重新载入索引文件
 	reload: function(){
@@ -101,7 +98,9 @@ var Model = Class.extend({
 		var content = gb.fs.readFileSync(targetfile, 'utf8');
 		var frontMatter = yml.split(content).data;
         var doc = yml([frontMatter, '---', ''].join('\n'));
+        doc._content = undefined;
 
+        url = url.replace(/\\/g, '/');
   		_this.data.urlmap[url] = doc;
 
   		if(typeof doc.tags != 'undefined' && doc.tags != ''){

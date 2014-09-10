@@ -6,13 +6,23 @@
         <h1>CokWiki</h1>
         <h2>a tiny wiki based on cokmvc!</h2>
     </li>
-    <li class="menus">
+    <li class="goto">
+        <div class="ui form">
+            <div class="field">
+                <input type="text" name="goto" placeholder="搜索">
+            </div>
+        </div>
+    </li>
+    <li class="menus-toggle">
+        <a class="ui icon button"><i class="icon reorder"></i></a>
+    </li>
+    <li class="menus clearfix hidden">
         <ul>
-            <li><a href="#" title="首页">首页</a>
+            <li><a href="/" title="首页">首页</a>
             </li>
-            <li><a href="#" title="全部条目">全部条目</a>
+            <li><a href="/posts" title="全部条目">全部条目</a>
             </li>
-            <li><a href="#" title="时间线">时间线</a>
+            <li><a href="/timeline" title="时间线">时间线</a>
             </li>
         </ul>
     </li>
