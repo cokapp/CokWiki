@@ -2,10 +2,11 @@
 <%if(model.opera === 'edit'){%>
 	<form method="post" action="<%-model.url%>">
 	    <div class="ui form">
+	    	<input type="submit" class="ui blue submit button" value="提 交" />
+	    	<a href="<%=model.url%>" class="ui blue submit button" title="取 消">取 消</a>
 	        <div class="field">
 	            <textarea name="source"><%-model.source%></textarea>
 	        </div>
-	        <input type="submit" class="ui blue submit button" value="提 交" />
 	    </div>
 	</form>
 <%}else if(model.opera === 'discuss'){%>
@@ -13,7 +14,30 @@
 		discuss
 	</div>
 <%}else if(model.opera === 'view'){%>
-	<div>
-		<%-model.content%>
-	</div>
+	<article id="<%=model.url%>" class="wiki">
+		<ul class="wiki-meta clearfix">
+			<li class="date">
+				<a href="/wiki/timeline/<%=model.date.format('YYYYMMDD')%>">
+					<%-model.date.format('[<b>]DD[</b>] MMM YYYY')%>
+				</a>
+			</li>
+			<li class="action">
+				<a href="<%=model.url%>?opera=edit" class="positive fluid ui button">编 辑</a>
+			</li>
+			<li class="tags">
+				<i class="icon tags"></i>
+				<%
+					for(var i in model.meta.tags){
+						var tag = model.meta.tags[i];
+				%>
+				<a href="/wiki/tags/<%=tag%>" class="ui small circular label"><%=tag%></a>
+				<%}%>
+			</li>
+		</ul>
+		<div class="wiki-content wikistyle">
+			<%-model.content%>
+		</div>
+		<div class="wiki-nav">
+		</div>
+	</article>
 <%}%>

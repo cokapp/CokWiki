@@ -13,7 +13,8 @@
         "js-yaml": "latest",
         "xfs": "latest",
         "lowdb": "latest",
-        "showdown": "latest"
+        "showdown": "latest",
+        "moment": "latest"
     },
     "repository": "git://github.com/cokapp/nodemvc",
     "engines": { "node": "*" }

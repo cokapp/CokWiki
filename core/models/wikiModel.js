@@ -1,6 +1,7 @@
 var yml = require('../lib/yml'),
 
     Showdown       = require('showdown'),
+    moment         = require('moment'),
     ghostgfm       = require('../lib/showdown/extensions/ghostgfm'),
     converter      = new Showdown.converter({extensions: [ghostgfm]});
 
@@ -13,6 +14,7 @@ var Model = Class.extend({
     title: null,
     intro: null,
     tags: null,
+    date: null,
     source: null,
 
     meta: null,
@@ -49,12 +51,27 @@ var Model = Class.extend({
             _this.content = converter.makeHtml(md.content);
 
             _this.meta = yml([md.data, '---', ''].join('\n'));
-
-            _this.title = _this.meta.title;
-            _this.intro = _this.meta.intro;
-            _this.tags = _this.meta.tags;
-
+        }else{
+            _this.meta = {};
         }
+
+        if(typeof _this.meta.tags !== 'undefined'){
+            _this.meta.tags = _this.meta.tags.split(/[, ]+/);
+        }else{
+            _this.meta.tags = ['no-tags'];
+        }
+
+        if(typeof _this.meta.date !== 'undefined'){
+            _this.meta.date = moment(_this.meta.date);
+        }else{
+           _this.meta.date = moment(new Date());
+        }
+
+        _this.title = _this.meta.title;
+        _this.intro = _this.meta.intro;
+        _this.tags = _this.meta.tags;
+        _this.date = _this.meta.date;
+
     },
 
     init: function() {

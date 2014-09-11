@@ -2,9 +2,9 @@
 layout: page
 title: 关于
 comments: true
-date: 2013-06-23 11:20
+date: 2014-06-23 11:20
 intro: 一些关于本站的介绍
-tags: 啊,不,从,的
+tags: 标签 傲视 全能型 选项
 ---
 
 #关于

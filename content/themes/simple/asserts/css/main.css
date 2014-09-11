@@ -37,6 +37,47 @@ html{
 .content-wrapper, .header-wrapper{
 	background: #fff;
 }
+.header-wrapper{
+
+}
+
+/*view*/
+article.wiki{
+}
+article.wiki .wiki-meta{
+	float: right;
+	width: 140px;
+	margin: 0 0 5px 5px;
+	padding: 5px;
+	border-left: 1px solid #ccc;
+}
+
+article.wiki .wiki-meta li{
+	margin-bottom: 10px;
+}
+article.wiki .wiki-meta .date{
+}
+article.wiki .wiki-meta .date a{
+	background: #258fb8;
+	text-decoration: none;
+	font-family: 'source_code_pro';
+	color: #fff;
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+}
+article.wiki .wiki-meta .date a:hover{
+	background: #359fc8;
+}
+article.wiki .wiki-meta .date a b{
+	display: block;
+	font-size: 40px;
+}
+article.wiki .wiki-meta .tags a{
+	margin: 2px 0;
+	text-decoration: none;
+}
 
 /*edit*/
 textarea[name='source']{
@@ -101,6 +142,7 @@ textarea[name='source']{
 		width: 170px;
 		float: left;
 		padding: 20px;
+		height: 100%;
 	}
 	.navigation .logo{
 		text-align: center;
