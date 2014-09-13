@@ -24,8 +24,7 @@ ul, li{
 
 #header{
 	margin-bottom: 10px;
-}
-.navigation{
+
 }
 #header li{
 	float: left;
@@ -36,6 +35,7 @@ ul, li{
 }
 .navigation.left{
 	float: left;
+	background: red;
 }
 .navigation.right{
 	float: right;
