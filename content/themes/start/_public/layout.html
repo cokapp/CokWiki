@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= model.title %></title>
+  <% include head.html %>
+</head>
+<body>
+
+	<div id="main-container">
+		<div id="left-col">
+		  	<% include sidebar.html %>
+		</div>
+		<div id="right-col">
+			<% include header.html %>
+			<%- body %>
+			<% include footer.html %>
+		</div>
+	</div>
+
+</body>
+</html>

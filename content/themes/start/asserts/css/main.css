@@ -1,0 +1,89 @@
+body{
+	font-family: '微软雅黑';
+}
+ul, li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main-container{
+}
+#left-col{
+	width: 200px;
+	float: left;
+	background: #FFF;
+	position: fixed;
+	height: 100%;
+	border-right: 1px solid #bbb;
+}
+#right-col{
+	margin-left: 200px;
+	background: #FFF;
+}
+
+#header{
+	margin-bottom: 10px;
+}
+.navigation{
+}
+#header li{
+	float: left;
+	border-bottom: 1px solid #bbb;	
+}
+#header li.active{
+	border: none;
+}
+.navigation.left{
+	float: left;
+}
+.navigation.right{
+	float: right;
+}
+.navigation li{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	width: 50px;
+	text-align: center;
+}
+.navigation.left li {
+}
+.navigation.right li{
+	border-left: 1px solid #bbb !important;
+}
+
+
+
+
+/*wiki============================================================================*/
+.wiki-meta ul{
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #E7E7E7;
+}
+.wiki-meta li{
+	float: left;
+	margin-right: 15px;
+}
+.wiki-meta li>i{
+	margin-right: 5px;
+}
+.wiki{
+	background: #ffffff;
+	padding: 20px;
+}
+
+
+/*响应式设计*/
+
+/*宽度小于768px时，隐藏左侧栏*/
+@media screen and(max-width: 768px){
+	#left-col{
+		display: none !important;
+	}
+	#right-col{
+		margin-left: 0;
+	}
+}
+

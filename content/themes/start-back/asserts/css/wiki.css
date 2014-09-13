@@ -1,0 +1,54 @@
+.wiki h1,.wiki h2,.wiki h3,.wiki h4,.wiki h5,.wiki h6{border:0!important;}
+.wiki h1{font-size:170%!important;border-top:4px solid #aaa!important;padding-top:.5em!important;margin-top:1.5em!important;}
+.wiki h1:first-child{margin-top:0!important;padding-top:.25em!important;border-top:none!important;}
+.wiki h2{font-size:150%!important;margin-top:1.5em!important;border-top:4px solid #e0e0e0!important;padding-top:.5em!important;}
+.wiki h3{margin-top:1em!important;}
+.wiki p{margin:1em 0!important;line-height:1.5em!important;}
+.wiki a.absent{color:#a00;}
+.wiki ul,#wiki-form .content-body ul{margin:1em 0 1em 2em!important;}
+.wiki ol,#wiki-form .content-body ol{margin:1em 0 1em 2em!important;}
+.wiki ul li,#wiki-form .content-body ul li,.wiki ol li,#wiki-form .content-body ol li{margin-top:.5em;margin-bottom:.5em;}
+.wiki ul ul,.wiki ul ol,.wiki ol ol,.wiki ol ul,#wiki-form .content-body ul ul,#wiki-form .content-body ul ol,#wiki-form .content-body ol ol,#wiki-form .content-body ol ul{margin-top:0!important;margin-bottom:0!important;}
+.wiki blockquote{margin:1em 0!important;border-left:5px solid #ddd!important;padding-left:.6em!important;color:#555!important;}
+.wiki dt{font-weight:bold!important;margin-left:1em!important;}
+.wiki dd{margin-left:2em!important;margin-bottom:1em!important;}
+.wiki table{margin:1em 0!important;}
+.wiki table th{border-bottom:1px solid #bbb!important;padding:.2em 1em!important;}
+.wiki table td{border-bottom:1px solid #ddd!important;padding:.2em 1em!important;}
+.wiki img{max-width:100%;}
+
+.wiki .frame{margin:0;display:inline-block;}
+.wiki .frame img{display:block;}
+.wiki .frame>span{display:block;border:1px solid #aaa;padding:4px;}
+.wiki .frame span span{display:block;font-size:10pt;margin:0;padding:4px 0 2px 0;text-align:center;line-height:10pt;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;}
+.wiki .float-left{float:left;padding:.5em 1em .25em 0;}
+.wiki .float-right{float:right;padding:.5em 0 .25em 1em;}
+.wiki .align-left{display:block;text-align:left;}
+.wiki .align-center{display:block;text-align:center;}
+.wiki .align-right{display:block;text-align:right;}
+
+.wiki pre{
+	padding: 0;
+	border-radius: 0;
+	border: none;
+}
+.wiki code, .wiki pre{
+	font: normal 12pt 'source_code_pro';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,9 +3,9 @@
 
     "DIR": {
         "DATA": "../content/data",
-        "VIEWS" : "../content/themes/simple",
+        "VIEWS" : "../content/themes/start",
         "STATIC" : {
-            "asserts": "../content/themes/simple/asserts"
+            "asserts": "../content/themes/start/asserts"
         }        
     }
 
