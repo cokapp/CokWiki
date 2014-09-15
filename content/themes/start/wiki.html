@@ -1,14 +1,58 @@
 
 <%if(model.oper === 'edit'){%>
 	<form method="post" action="<%-model.url%>">
-	    <div class="ui form">
-	    	<input type="submit" class="ui blue submit button" value="提 交" />
-	    	<a href="<%=model.url%>" class="ui blue submit button" title="取 消">取 消</a>
-	        <div class="field">
-	            <textarea name="source"><%-model.source%></textarea>
-	        </div>
+	    <div class="editor">
+	    	<div class="edit-tool">
+		    	<input type="submit" class="ui blue submit button" value="提 交" />
+		    	<a href="<%=model.url%>" class="ui blue submit button" title="取 消">取 消</a>
+	    	</div>
+	        <textarea id="source" name="source" class="hidden"><%-model.source%></textarea>
+	        <div id="epiceditor"></div>
 	    </div>
 	</form>
+
+	<script type="text/javascript" src="/asserts/libs/EpicEditor/js/epiceditor.min.js"></script>
+	<script type="text/javascript">
+var opts = {
+  container: 'epiceditor',
+  textarea: 'source',
+  basePath: '/asserts/libs/EpicEditor/',
+  clientSideStorage: true,
+  localStorageName: 'epiceditor',
+  useNativeFullscreen: true,
+  parser: marked,
+  file: {
+    name: 'epiceditor',
+    defaultContent: '',
+    autoSave: 100
+  },
+  theme: {
+    base: '/themes/base/epiceditor.css',
+    preview: '/themes/preview/preview-dark.css',
+    editor: '/themes/editor/epic-dark.css'
+  },
+  button: {
+    preview: true,
+    fullscreen: true,
+    bar: "auto"
+  },
+  focusOnLoad: false,
+  shortcut: {
+    modifier: 18,
+    fullscreen: 70,
+    preview: 80
+  },
+  string: {
+    togglePreview: 'Toggle Preview Mode',
+    toggleEdit: 'Toggle Edit Mode',
+    toggleFullscreen: 'Enter Fullscreen'
+  },
+  autogrow: false
+}
+var editor = new EpicEditor(opts);
+
+	</script>
+
 <%}else if(model.oper === 'discuss'){%>
 	<div>
 		discuss
