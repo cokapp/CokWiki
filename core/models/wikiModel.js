@@ -6,7 +6,7 @@ var yml = require('../lib/yml'),
     converter      = new Showdown.converter({extensions: [ghostgfm]});
 
 var Model = Class.extend({
-    opera: 'view',
+    oper: 'view',
 
     exists: false,
     url: null,

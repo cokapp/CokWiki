@@ -10,57 +10,67 @@ ul, li{
 #main-container{
 }
 #left-col{
-	width: 200px;
+	z-index: 1;
+	width: 180px;
 	float: left;
 	background: #FFF;
 	position: fixed;
 	height: 100%;
-	border-right: 1px solid #bbb;
+	overflow-y: auto !important;	
 }
 #right-col{
-	margin-left: 200px;
+	margin-left: 180px;
 	background: #FFF;
 }
 
-#header{
-	margin-bottom: 10px;
-
+/*head============================================================================*/
+.wiki-head{
 }
-#header li{
-	float: left;
-	border-bottom: 1px solid #bbb;	
+.wiki-nav{
+	background: #fff;
+	border-bottom: 1px solid #ccc;
 }
-#header li.active{
-	border: none;
-}
-.navigation.left{
-	float: left;
-	background: red;
-}
-.navigation.right{
+.wiki-nav li{
 	float: right;
+	height: 50px;
+	line-height: 50px;
 }
-.navigation li{
-	display: block;
-	height: 40px;
-	line-height: 40px;
+.wiki-title{
+	float: left !important;
+	font-size: 24px;
+	margin-left: 10px;
+}
+.wiki-sidebar-toggle{
+	z-index: 10000;	
+	float: left !important;
+	font-size: 24px;
 	width: 50px;
 	text-align: center;
-}
-.navigation.left li {
-}
-.navigation.right li{
-	border-left: 1px solid #bbb !important;
+	cursor: pointer;
+	border-right: 1px solid #ccc;
 }
 
+.wiki-search{
+	margin-right: 10px;
+}
+.wiki-search input{
+	height: 40px;
+	width: 40px;
+}
+.wiki-oper a{
+	display: block;
+	float: left;
+	padding: 0 10px;
+	border-left: 1px solid #ccc;
+}
+.wiki-oper a.active{
+	height: 51px;
+	border-bottom: 1px solid #fff;
+}
 
-
-
-/*wiki============================================================================*/
 .wiki-meta ul{
-	padding: 10px;
-	margin: 10px;
-	border: 1px solid #E7E7E7;
+	padding: 5px;
+	margin: 5px 0 5px 0;
 }
 .wiki-meta li{
 	float: left;
@@ -69,6 +79,33 @@ ul, li{
 .wiki-meta li>i{
 	margin-right: 5px;
 }
+
+
+/*sidebar*/
+.sidebar{
+	padding: 10px;
+	text-align: center;
+	height: 100%;
+	border-right: 1px solid #bbb;	
+}
+.sidebar .menus li{
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
+.sidebar a{
+	display: block;
+	text-indent: 10px;
+}
+.sidebar a:hover{
+	background: #ccc;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/*wiki============================================================================*/
 .wiki{
 	background: #ffffff;
 	padding: 20px;
@@ -78,12 +115,38 @@ ul, li{
 /*响应式设计*/
 
 /*宽度小于768px时，隐藏左侧栏*/
-@media screen and(max-width: 768px){
+@media (max-width: 768px){
 	#left-col{
-		display: none !important;
+		display: none;
 	}
 	#right-col{
 		margin-left: 0;
 	}
 }
+/*宽度大于768px时，显示左侧栏*/
+@media (min-width: 768px){
+	#jPanelMenu-menu{
+		display: none !important;
+	}
+	.jPanelMenu-panel{
+		left: 0 !important;
+	}
+	#left-col{
+		display: block !important;
+	}
+	#right-col{
+		margin-left: 180px;
+	}
+	.wiki-sidebar-toggle{
+		display: none;
+	}
+}
+
+/*fix*/
+#jPanelMenu-menu{
+	overflow-y: auto !important;	
+}
+
+
+
 

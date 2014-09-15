@@ -1,14 +1,53 @@
-<div id="header" class="clearfix">
-  <div class="navigation left">
-  </div>
-  <div class="navigation right">
-	<ul>
-		<li <%if(model.opera === 'view'){%>class = "active" <%}%>><a href="<%=model.url%>"><span>阅读</span></a></li>
-		<li <%if(model.opera === 'discuss'){%>class = "active" <%}%>><a href="<%=model.url%>?opera=discuss"><span>讨论</span></a></li>
-		<li <%if(model.opera === 'edit'){%>class = "active" <%}%>><a href="<%=model.url%>?opera=edit"><span>编辑</span></a></li>
-		<li class="search">
+
+<div class="wiki-head">
+	<ul class="wiki-nav clearfix">
+		<li class="wiki-sidebar-toggle">
+			<a href="#"><i class="glyphicon glyphicon-home"></i></a>
+		</li>
+
+		<li class="wiki-title">
+			<%
+			var links = model.url.substring(1, model.url.length).split('/');
+			var link = '/';
+			var text = '';
+			for(var i in links){
+			link = link + links[i] + '/';
+			title = links[i];
+			if(i != links.length - 1){%>
+			<a href="<%=link%>" title="<%=title%>"><%=title%></a>
+				»
+			<%}else{%>
+			<%=title%>
+			<%}}%>
+		</li>
+		<li class="wiki-oper">
+			<a class=" <%if(model.oper === 'view'){%>active<%}%>" href="<%=model.url%>">浏 览</a>
+			<a class=" <%if(model.oper === 'edit'){%>active<%}%>" href="<%=model.url%>?oper=edit">编 辑</a>
+			<a class=" <%if(model.oper === 'discuss'){%>active<%}%>" href="<%=model.url%>?oper=discuss">讨 论</a>
+		</li>
+		<li class="wiki-search">
+			<input type="text" name="search" placeholder="GO">
 		</li>
 	</ul>
-  </div>
+
+	<div class="wiki-meta clearfix">
+		<ul class="clearfix">	
+			<li class="date">
+				<i class="glyphicon glyphicon-time"></i>
+				<a href="/wiki/timeline/<%=model.date.format('YYYYMMDD')%>">
+					<%-model.date.format('MMM DD, YYYY')%>
+				</a>
+			</li>
+			<li class="tags">
+				<i class="glyphicon glyphicon-tags"></i>
+				<%
+					for(var i in model.meta.tags){
+						var tag = model.meta.tags[i];
+				%>
+				<a href="/wiki/tags/<%=tag%>" class="badge"><%=tag%></a>
+				<%}%>
+			</li>
+		</ul>
+	</div>
 
 </div>

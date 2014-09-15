@@ -1,40 +1,5 @@
 
-<div class="wiki-meta clearfix">
-	<ul class="clearfix">
-		<li class="link">
-			<i class="glyphicon glyphicon-link"></i>
-			<%
-			var links = model.url.substring(1, model.url.length).split('/');
-			var link = '/';
-			var text = '';
-			for(var i in links){
-				link = link + links[i] + '/';
-				title = links[i];
-			%>
-			<a href="<%=link%>" title="<%=title%>"><%=title%></a>
-			<%if(i != links.length - 1){%>
-				»
-			<%}}%>
-		</li>
-		<li class="date">
-			<i class="glyphicon glyphicon-time"></i>
-			<a href="/wiki/timeline/<%=model.date.format('YYYYMMDD')%>">
-				<%-model.date.format('MMM DD, YYYY')%>
-			</a>
-		</li>
-		<li class="tags">
-			<i class="glyphicon glyphicon-tags"></i>
-			<%
-				for(var i in model.meta.tags){
-					var tag = model.meta.tags[i];
-			%>
-			<a href="/wiki/tags/<%=tag%>" class="badge"><%=tag%></a>
-			<%}%>
-		</li>
-	</ul>
-</div>
-
-<%if(model.opera === 'edit'){%>
+<%if(model.oper === 'edit'){%>
 	<form method="post" action="<%-model.url%>">
 	    <div class="ui form">
 	    	<input type="submit" class="ui blue submit button" value="提 交" />
@@ -44,11 +9,11 @@
 	        </div>
 	    </div>
 	</form>
-<%}else if(model.opera === 'discuss'){%>
+<%}else if(model.oper === 'discuss'){%>
 	<div>
 		discuss
 	</div>
-<%}else if(model.opera === 'view'){%>
+<%}else if(model.oper === 'view'){%>
 	<article id="<%=model.url%>" class="wiki">
 		<div class="wiki-content">
 			<%-model.content%>
