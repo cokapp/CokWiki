@@ -5,8 +5,8 @@ html, body, iframe, div {
 
 #epiceditor-utilbar {
   position:fixed;
-  bottom:10px;
-  right:10px;
+  top:10px;
+  right:15px;
 }
 
 #epiceditor-utilbar button {
@@ -68,3 +68,5 @@ only screen and (                min-resolution: 2dppx) {
 .epiceditor-preview-mode #epiceditor-utilbar button.epiceditor-toggle-preview-btn {
   display:none;
 }
+
+

@@ -34,21 +34,21 @@ for (int i=0;i<10;i++){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>I can haz embedded CSS and JS</title>
-	<style>
-		@media print {
-			p { color: red !important; }
-		}
-	</style>
+ <meta charset="utf-8" />
+ <title>I can haz embedded CSS and JS</title>
+ <style>
+ 	@media print {
+   p { color: red !important; }
+ 	}
+ </style>
 </head>
 <body>
-	<h1>I can haz embedded CSS and JS</h1>
-	<script>
-	if (true) {
-		console.log('foo');
-	}
-	</script>
+ <h1>I can haz embedded CSS and JS</h1>
+ <script>
+ if (true) {
+ 	console.log('foo');
+ }
+ </script>
 
 </body>
 </html>
