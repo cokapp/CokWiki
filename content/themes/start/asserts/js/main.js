@@ -30,7 +30,7 @@ function initEditor() {
         container: 'epiceditor',
         textarea: 'source',
         basePath: '/asserts/libs/EpicEditor/',
-        clientSideStorage: true,
+        clientSideStorage: false,
         localStorageName: 'epiceditor',
         useNativeFullscreen: true,
         parser: marked,

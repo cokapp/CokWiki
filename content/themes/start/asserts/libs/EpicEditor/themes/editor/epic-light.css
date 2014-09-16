@@ -1,5 +1,6 @@
 body {
     border: dashed 2px #bbb;
+    min-height: 100px;
     padding: 5px;
     margin: 0;
 }

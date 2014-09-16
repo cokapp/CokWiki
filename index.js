@@ -3,6 +3,7 @@ var NodeMVC = require('cokmvc');
 
 //Set AppRoot
 NodeMVC.setAppRoot(__dirname + '/core');
+NodeMVC.attachConfig(__dirname + '/conf.json');
 
 //StartUP
 NodeMVC.startup(function(server){
