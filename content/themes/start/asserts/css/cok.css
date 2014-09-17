@@ -1,0 +1,61 @@
+.cok-success {
+    color: #3c763d;
+}
+.cok-info {
+    color: #31708f;
+}
+.cok-warning {
+    color: #8a6d3b;
+}
+.cok-danger {
+    color: #a94442;
+}
+.cok-bg-success {
+    background-color: #dff0d8;
+}
+.cok-bg-info {
+    background-color: #d9edf7;
+}
+.cok-bg-warning {
+    background-color: #fcf8e3;
+}
+.cok-bg-danger {
+    background-color: #f2dede;
+}
+.cok-alert {
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+.cok-alert:empty {
+    display: none !important;
+}
+.cok-util-fleft {
+    float: left;
+}
+.cok-util-fright {
+    float: right;
+}
+.cok-util-clearfix:after, .cok-util-clearfix:before {
+    display: table;
+    content: " ";
+}
+.cok-util-clearfix:after {
+    clear: both;
+}
+/*一般的文字截断（适用于内联与块）：*/
+
+.cok-util-textover {
+    display: block;
+    /*内联对象需加 width: 300px;*/
+    word-break: keep-all;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 不换行 */
+    overflow: hidden;
+    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;
+    /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一 起使用。*/
+    /*text-overflow:clip;*/
+    /* 内容超出宽度时直接截断 */
+}

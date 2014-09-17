@@ -1,6 +1,14 @@
 {
   "urlmap": [
     {
+      "url": "/code/towife",
+      "meta": {
+        "title": "给老婆的代码",
+        "tags": "blog",
+        "_content": ""
+      }
+    },
+    {
       "url": "/help/markdown",
       "meta": {
         "title": "markdown语法说明",
@@ -23,9 +31,31 @@
         "tags": "PAGE",
         "_content": ""
       }
+    },
+    {
+      "url": "/wiki/all",
+      "meta": {
+        "title": "全部条目",
+        "tags": "todo plugin",
+        "_content": ""
+      }
+    },
+    {
+      "url": "/wiki/timeline",
+      "meta": {
+        "title": "时间线",
+        "tags": "todo plugin",
+        "_content": ""
+      }
     }
   ],
   "tagmap": [
+    {
+      "tag": "blog",
+      "urls": [
+        "/code/towife"
+      ]
+    },
     {
       "tag": "PAGE 帮助文档",
       "urls": [
@@ -37,6 +67,13 @@
       "urls": [
         "/home",
         "/wiki/about"
+      ]
+    },
+    {
+      "tag": "todo plugin",
+      "urls": [
+        "/wiki/all",
+        "/wiki/timeline"
       ]
     }
   ]
