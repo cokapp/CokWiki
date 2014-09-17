@@ -1,12 +1,16 @@
 //Set Core Lib
 var NodeMVC = require('cokmvc');
 
-//Set AppRoot
-NodeMVC.setAppRoot(__dirname + '/core');
-NodeMVC.attachConfig(__dirname + '/conf.json');
+var options = {
+	appRoot: __dirname + '/core',
+	cfgFiles: [{
+		weight: 3,
+		file: __dirname + '/conf.json'
+	}]
+};
 
 //StartUP
-NodeMVC.startup(function(server){
+NodeMVC.startup(options, function(server){
 	//NodeMVC is working, enjoy!
 
 	//set env

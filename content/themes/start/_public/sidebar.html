@@ -3,17 +3,17 @@
         <img src="/asserts/img/cover.png">
     </li>
     <li class="title">
-        <h2>CokWiki</h2>
-        <h3>a tiny wiki based on cokmvc!</h3>
+        <h2><%=siteConf.title%></h2>
+        <h3><%=siteConf['sub-title']%></h3>
     </li>
     <li class="menus clearfix">
         <ul>
-            <li><a href="/" title="首页">首页</a>
-            </li>
-            <li><a href="/wiki/all" title="全部条目">全部条目</a>
-            </li>
-            <li><a href="/wiki/timeline" title="时间线">时间线</a>
-            </li>
+
+            <%for(var i in siteConf.links){
+                var link = siteConf.links[i];
+            %>
+            <li><a href="<%=link.url%>" title="<%=link.title%>"><%=link.title%></a></li>
+            <%}%>
         </ul>
     </li>
 </ul>

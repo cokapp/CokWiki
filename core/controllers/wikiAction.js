@@ -6,7 +6,9 @@ var Handler = gb.AbstractHandler.extend({
         var url = _this.para.urlPara[0];
         _this.model.load(url);
 
-        this.render();
+        this.render({
+            siteConf: gb.config
+        });
     },
     doPost: function() {
         var _this = this;
@@ -15,7 +17,9 @@ var Handler = gb.AbstractHandler.extend({
         _this.model.save();
         _this.model.load(_this.model.url);
 
-        this.render();
+        this.render({
+            siteConf: gb.config
+        });
     }
 
 });

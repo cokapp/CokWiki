@@ -1,9 +1,25 @@
 {
   "urlmap": [
     {
+      "url": "/help/markdown",
+      "meta": {
+        "title": "markdown语法说明",
+        "tags": "PAGE 帮助文档",
+        "_content": ""
+      }
+    },
+    {
       "url": "/home",
       "meta": {
         "title": "首页",
+        "tags": "PAGE",
+        "_content": ""
+      }
+    },
+    {
+      "url": "/wiki/about",
+      "meta": {
+        "title": "关于",
         "tags": "PAGE",
         "_content": ""
       }
@@ -11,9 +27,16 @@
   ],
   "tagmap": [
     {
+      "tag": "PAGE 帮助文档",
+      "urls": [
+        "/help/markdown"
+      ]
+    },
+    {
       "tag": "PAGE",
       "urls": [
-        "/home"
+        "/home",
+        "/wiki/about"
       ]
     }
   ]

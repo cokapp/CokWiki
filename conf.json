@@ -1,5 +1,21 @@
 {
-	"title": "CokWiki",
-	"sub-title": "a tiny wiki based on cokmvc!",
-	"cover": null
+    "title": "CokWiki",
+    "sub-title": "a tiny wiki based on cokmvc!",
+    "cover": null,
+    "links": [{
+        "title": "首页",
+        "url": "/"
+    },{
+        "title": "全部条目",
+        "url": "/wiki/all"
+    },{
+        "title": "时间线",
+        "url": "/wiki/timeline"
+    },{
+        "title": "博客",
+        "url": "http://baidu.com"
+    },{
+        "title": "关于",
+        "url": "/wiki/about"
+    }]
 }
