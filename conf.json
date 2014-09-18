@@ -14,5 +14,9 @@
     },{
         "title": "关于",
         "url": "/wiki/about"
-    }]
+    }],
+    "auth": {
+        "username": "admin",
+        "password": "hcl850924"
+    }
 }

@@ -11,16 +11,10 @@ var Handler = gb.AbstractHandler.extend({
 
         var user = _this.model;
 
-        var hashedPassword = user.md5();
-
         if(gb.config.auth.username == user.username 
-            && gb.config.auth.password == hashedPassword){
-            //login success
+            && gb.config.auth.password == user.password){
+            _this.para.req.session.user = user;
         }
-
-
-
-
         this.render('login', {
             layout: 'null'
         });

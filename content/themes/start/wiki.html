@@ -1,5 +1,5 @@
 
-<%if(model.oper === 'edit'){%>
+<%if(model.oper === 'edit' && req.session.user){%>
 	<form method="post" action="<%-model.url%>">
 	    <div class="editor">
 	    	<div class="edit-tool">
