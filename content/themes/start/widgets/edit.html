@@ -1,0 +1,10 @@
+<form method="post" action="<%-model.url%>">
+    <div class="editor">
+    	<div class="edit-tool">
+	    	<input type="submit" class="ui blue submit button" value="提 交" />
+	    	<a href="<%=model.url%>" class="ui blue submit button" title="取 消">取 消</a>
+    	</div>
+        <textarea id="source" name="source" class="hidden"><%-model.source%></textarea>
+        <div id="epiceditor"></div>
+    </div>
+</form>

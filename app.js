@@ -1,11 +1,14 @@
 //Set Core Lib
+var path = require('path');
+
 var NodeMVC = require('cokmvc');
+//var NodeMVC = require('../../index');
 
 var options = {
-	appRoot: __dirname + '/core',
+	appRoot: path.join(__dirname, 'core'),
 	cfgFiles: [{
 		weight: 3,
-		file: __dirname + '/conf.json'
+		file: path.join(__dirname, 'conf.json')
 	}]
 };
 
@@ -18,12 +21,12 @@ NodeMVC.startup(options, function(server){
 
 	//load indexing
 	var indexModel = require('./core/models/indexModel');
-	gb.indexing = new indexModel();
-	gb.indexing.rebuild();
+	ctx.indexing = new indexModel();
+	ctx.indexing.rebuild();
 
 	var shelfModel = require('./core/models/shelfModel');
-	gb.shelf = new shelfModel();
-	gb.shelf.rebuild();
+	ctx.shelf = new shelfModel();
+	ctx.shelf.rebuild();
 
 });
 

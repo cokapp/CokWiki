@@ -27,13 +27,14 @@ var Model = Class.extend({
 	init: function(file){
 		var _this = this;
 
-		_this.data.path = gb.path.join(gb.config.__ENV.APP_ROOT, gb.config.DIR.DATA);
+		_this.data.path = COKMVC.path.join(ctx.config.__ENV.APP_ROOT
+			, ctx.config.DIR.DATA);
 
 		if(typeof file == 'undefined'){
 			file = 'index.json';
 		}
 		
-		_this.data.file = gb.path.join(_this.data.path, file);
+		_this.data.file = COKMVC.path.join(_this.data.path, file);
 	},
 	//从源文件重建索引
 	rebuild: function(){
@@ -42,7 +43,7 @@ var Model = Class.extend({
 		_this.data.urlmap = {};
 		_this.data.tagmap = {};
 
-		var allMDs = gb.fileutil.readAllFile(_this.data.path);
+		var allMDs = COKMVC.fileutil.readAllFile(_this.data.path);
 
         //约定：以源文件以.md结尾
         var endWith = '.md';
@@ -61,11 +62,11 @@ var Model = Class.extend({
 		var _this = this;
 
 		//如果不存在索引文件，则重建
-		if(gb.fs.exists(_this.data.file, function(exist){
+		if(COKMVC.fs.exists(_this.data.file, function(exist){
 			if(!exist){
 				_this.rebuild();
 			}else{
-				var json = JSON.parse(gb.fs.readFileSync(_this.data.file));
+				var json = JSON.parse(COKMVC.fs.readFileSync(_this.data.file));
 				_this.data.urlmap = json.urlmap;
 				_this.data.tagmap = json.tagmap;	
 			}		
@@ -77,25 +78,25 @@ var Model = Class.extend({
 	save: function(){
 		var _this = this;
 		var data = JSON.stringify(_this.data);
-		gb.fs.writeFile(_this.data.file, data, function (err) {
+		COKMVC.fs.writeFile(_this.data.file, data, function (err) {
 			if (err) throw err;
-			gb.logger.info('文件【%s】已保存！', _this.data.file);
+			COKMVC.logger.info('文件【%s】已保存！', _this.data.file);
 		});
 	},
 	//向索引文件中插入值
 	put: function(url){
 		var _this = this;
 		
-		var targetfile = gb.path.join(_this.data.path, url + '.md');
+		var targetfile = COKMVC.path.join(_this.data.path, url + '.md');
 		//如果不存在目标文件，则返回
-		if(gb.fs.exists(targetfile, function(exist){
+		if(COKMVC.fs.exists(targetfile, function(exist){
 			if(!exist){
-				gb.logger.warn('文件【%s】不存在！', targetfile);
+				COKMVC.logger.warn('文件【%s】不存在！', targetfile);
 				return;
 			}	
 		}));
 
-		var content = gb.fs.readFileSync(targetfile, 'utf8');
+		var content = COKMVC.fs.readFileSync(targetfile, 'utf8');
 		var frontMatter = yml.split(content).data;
         var doc = yml([frontMatter, '---', ''].join('\n'));
         doc._content = undefined;

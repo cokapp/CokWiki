@@ -1,6 +1,14 @@
 {
   "urlmap": [
     {
+      "url": "/about",
+      "meta": {
+        "title": "about",
+        "tags": "page",
+        "_content": ""
+      }
+    },
+    {
       "url": "/code/towife",
       "meta": {
         "title": "给老婆的代码",
@@ -25,6 +33,20 @@
       }
     },
     {
+      "url": "/playground",
+      "meta": {
+        "_content": "\n---\n"
+      }
+    },
+    {
+      "url": "/test",
+      "meta": {
+        "title": "test",
+        "tags": "test playground",
+        "_content": ""
+      }
+    },
+    {
       "url": "/wiki/about",
       "meta": {
         "title": "关于",
@@ -41,6 +63,12 @@
       }
     },
     {
+      "url": "/wiki/sidebar",
+      "meta": {
+        "_content": "\n---\n"
+      }
+    },
+    {
       "url": "/wiki/timeline",
       "meta": {
         "title": "时间线",
@@ -50,6 +78,12 @@
     }
   ],
   "tagmap": [
+    {
+      "tag": "page",
+      "urls": [
+        "/about"
+      ]
+    },
     {
       "tag": "blog",
       "urls": [
@@ -67,6 +101,12 @@
       "urls": [
         "/home",
         "/wiki/about"
+      ]
+    },
+    {
+      "tag": "test playground",
+      "urls": [
+        "/test"
       ]
     },
     {

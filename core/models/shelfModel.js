@@ -26,12 +26,13 @@ var Model = Class.extend({
 	init: function(file){
 		var _this = this;
 
-		_this.dataPath = gb.path.join(gb.config.__ENV.APP_ROOT, gb.config.DIR.DATA);
+		_this.dataPath = COKMVC.path.join(ctx.config.__ENV.APP_ROOT
+			, ctx.config.DIR.DATA);
 
 		if(typeof file == 'undefined'){
 			file = 'db.json';
 		}
-		_this.dbFile = gb.path.join(_this.dataPath, file);
+		_this.dbFile = COKMVC.path.join(_this.dataPath, file);
 
 	},
 	//从源文件重建索引
@@ -42,7 +43,7 @@ var Model = Class.extend({
 
 		_this.clear();
 
-		var allMDs = gb.fileutil.readAllFile(_this.dataPath);
+		var allMDs = COKMVC.fileutil.readAllFile(_this.dataPath);
 
         //约定：源文件以.md结尾
         var endWith = '.md';
@@ -63,7 +64,7 @@ var Model = Class.extend({
 		var _this = this;
 
 		//如果不存在索引文件，则重建
-		if(gb.fs.exists(_this.dbFile, function(exist){
+		if(COKMVC.fs.exists(_this.dbFile, function(exist){
 			if(!exist){
 				_this.rebuild();
 			}else{
@@ -91,16 +92,16 @@ var Model = Class.extend({
         url = url.replace(/\\/g, '/');
 
 		
-		var targetfile = gb.path.join(_this.dataPath, url + '.md');
+		var targetfile = COKMVC.path.join(_this.dataPath, url + '.md');
 		//如果不存在目标文件，则返回
-		if(gb.fs.exists(targetfile, function(exist){
+		if(COKMVC.fs.exists(targetfile, function(exist){
 			if(!exist){
-				gb.logger.warn('文件【%s】不存在！', targetfile);
+				COKMVC.logger.warn('文件【%s】不存在！', targetfile);
 				return;
 			}	
 		}));
 
-		var content = gb.fs.readFileSync(targetfile, 'utf8');
+		var content = COKMVC.fs.readFileSync(targetfile, 'utf8');
 		var frontMatter = yml.split(content).data;
         var doc = yml([frontMatter, '---', ''].join('\n'));
 

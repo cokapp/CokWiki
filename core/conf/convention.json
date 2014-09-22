@@ -4,6 +4,7 @@
     "DIR": {
         "DATA": "../content/data",
         "VIEWS" : "../content/themes/start",
+        "WIDGETS" : "../content/themes/start/widgets",
         "STATIC" : {
             "asserts": "../content/themes/start/asserts"
         }        
