@@ -7,4 +7,4 @@
 3. 支持多主题
 
 ##其他
-参见[DEMO](http://cokmvc.coding.io "host on coding.io")。
+参见[DEMO](http://cokwiki.coding.io "host on coding.io")。
