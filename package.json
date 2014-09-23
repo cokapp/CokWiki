@@ -1,7 +1,7 @@
 {
     "name": "cokwiki",
     "description": "a tiny wiki application based on cokmvc!",
-    "version": "0.0.1dev",
+    "version": "0.0.2dev",
     "author": {
         "name": "bladin",
         "email": "dev@cokapp.com",
@@ -10,6 +10,7 @@
     "main": "index",
     "dependencies": {
         "cokmvc": "latest",
+        "ejs": "latest",
         "js-yaml": "latest",
         "xfs": "latest",
         "lowdb": "latest",
