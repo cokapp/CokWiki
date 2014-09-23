@@ -1,1 +1,0 @@
-keep this folder for log store!
