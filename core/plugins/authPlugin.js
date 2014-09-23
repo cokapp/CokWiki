@@ -21,7 +21,7 @@ var Plugin = COKMVC.BasePlugin.extend({
                     ctrl.para.req.session.user = user;
                     ctrl.model.html = '{{widget>edit}}';
                 } else {
-                    ctrl.model.html = '{{widget>edit}}';
+                    ctrl.model.html = '{{widget>login}}';
                 }
             } else if (ctx.config.auth && !ctrl.para.req.session.user) {
                 ctrl.model.html = '{{widget>login}}';
