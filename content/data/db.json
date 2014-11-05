@@ -27,15 +27,15 @@
     {
       "url": "/home",
       "meta": {
-        "title": "首页",
-        "tags": "PAGE",
-        "_content": ""
+        "_content": "﻿---\r\ntitle: 首页\r\ntags: PAGE\r\n---\n"
       }
     },
     {
       "url": "/playground",
       "meta": {
-        "_content": "\n---\n"
+        "title": "playground",
+        "tags": "test",
+        "_content": ""
       }
     },
     {
@@ -97,16 +97,21 @@
       ]
     },
     {
-      "tag": "PAGE",
+      "tag": "test",
       "urls": [
-        "/home",
-        "/wiki/about"
+        "/playground"
       ]
     },
     {
       "tag": "test playground",
       "urls": [
         "/test"
+      ]
+    },
+    {
+      "tag": "PAGE",
+      "urls": [
+        "/wiki/about"
       ]
     },
     {

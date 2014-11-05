@@ -1,0 +1,881 @@
+[2014-09-23 11:23:52.439] [INFO] all - ##START##上下文初始化！
+[2014-09-23 11:23:52.442] [INFO] all - STEP.1 载入配置
+[2014-09-23 11:23:52.447] [INFO] all - { APP_NAME: 'Node Wiki',
+  PORT: 8086,
+  DIR: 
+   { MODELS: 'models',
+     VIEWS: '../content/themes/start',
+     WIDGETS: '../content/themes/start/widgets',
+     CONTROLLERS: 'controllers',
+     PLUGINS: 'plugins',
+     STATIC: { asserts: '../content/themes/start/asserts' },
+     DATA: '../content/data' },
+  VIEW_SUFFIX: 'html',
+  COOKIE_SECRET: 'node mvc',
+  SESSION_SECRET: 'node mvc',
+  URL_MAPPING: { '^$': '/home', '^(.*)$': '$1' },
+  __ENV: 
+   { ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\node_modules\\cokmvc\\',
+     APP_ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\core' },
+  title: 'CokWiki',
+  'sub-title': 'a tiny wiki based on cokmvc!',
+  cover: null,
+  links: 
+   [ { title: '首页', url: '/' },
+     { title: '全部条目', url: '/wiki/all' },
+     { title: '时间线', url: '/wiki/timeline' },
+     { title: '关于', url: '/wiki/about' } ],
+  auth: { username: 'admin', password: 'dddddd' } }
+[2014-09-23 11:23:52.455] [INFO] all - STEP.2 载入控制器
+[2014-09-23 11:23:52.456] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\】中载入模块！
+[2014-09-23 11:23:52.461] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】
+[2014-09-23 11:23:52.507] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】
+[2014-09-23 11:23:52.515] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers】中载入模块！
+[2014-09-23 11:23:52.521] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】
+[2014-09-23 11:23:52.527] [INFO] all - STEP.3 载入插件
+[2014-09-23 11:23:52.528] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\】中载入模块！
+[2014-09-23 11:23:52.532] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】
+[2014-09-23 11:23:52.537] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins】中载入模块！
+[2014-09-23 11:23:52.542] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】
+[2014-09-23 11:23:52.548] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】
+[2014-09-23 11:23:52.552] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】
+[2014-09-23 11:23:52.563] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】
+[2014-09-23 11:23:52.567] [INFO] all - ###END###上下文初始化！
+[2014-09-23 11:23:52.588] [INFO] all - Express server listening on port 8086
+[2014-09-23 11:23:53.044] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.045] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.047] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.050] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.052] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.056] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.057] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.059] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.061] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:23:53.062] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:14.633] [INFO] all - ##START##上下文初始化！
+[2014-09-23 11:25:14.637] [INFO] all - STEP.1 载入配置
+[2014-09-23 11:25:14.642] [INFO] all - { APP_NAME: 'Node Wiki',
+  PORT: 8086,
+  DIR: 
+   { MODELS: 'models',
+     VIEWS: '../content/themes/start',
+     WIDGETS: '../content/themes/start/widgets',
+     CONTROLLERS: 'controllers',
+     PLUGINS: 'plugins',
+     STATIC: { asserts: '../content/themes/start/asserts' },
+     DATA: '../content/data' },
+  VIEW_SUFFIX: 'html',
+  COOKIE_SECRET: 'node mvc',
+  SESSION_SECRET: 'node mvc',
+  URL_MAPPING: { '^$': '/home', '^(.*)$': '$1' },
+  __ENV: 
+   { ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\node_modules\\cokmvc\\',
+     APP_ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\core' },
+  title: 'CokWiki',
+  'sub-title': 'a tiny wiki based on cokmvc!',
+  cover: null,
+  links: 
+   [ { title: '首页', url: '/' },
+     { title: '全部条目', url: '/wiki/all' },
+     { title: '时间线', url: '/wiki/timeline' },
+     { title: '关于', url: '/wiki/about' } ],
+  auth: { username: 'admin', password: 'dddddd' } }
+[2014-09-23 11:25:14.651] [INFO] all - STEP.2 载入控制器
+[2014-09-23 11:25:14.652] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\】中载入模块！
+[2014-09-23 11:25:14.684] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】
+[2014-09-23 11:25:14.687] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】
+[2014-09-23 11:25:14.689] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers】中载入模块！
+[2014-09-23 11:25:14.696] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】
+[2014-09-23 11:25:14.699] [INFO] all - STEP.3 载入插件
+[2014-09-23 11:25:14.700] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\】中载入模块！
+[2014-09-23 11:25:14.704] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】
+[2014-09-23 11:25:14.708] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins】中载入模块！
+[2014-09-23 11:25:14.711] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】
+[2014-09-23 11:25:14.714] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】
+[2014-09-23 11:25:14.719] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】
+[2014-09-23 11:25:14.730] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】
+[2014-09-23 11:25:14.733] [INFO] all - ###END###上下文初始化！
+[2014-09-23 11:25:14.753] [INFO] all - Express server listening on port 8086
+[2014-09-23 11:25:15.208] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.210] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.211] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.213] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.214] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.219] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.221] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.222] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.226] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:15.227] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:25:17.668] [INFO] all - A new request processing started!
+[2014-09-23 11:25:17.676] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:17.679] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:17.681] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:17.682] [INFO] all - Start hand!
+[2014-09-23 11:25:17.683] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:17.708] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:17.710] [INFO] all - doAll by home
+[2014-09-23 11:25:17.716] [INFO] all - End hand!
+[2014-09-23 11:25:19.677] [INFO] all - A new request processing started!
+[2014-09-23 11:25:19.679] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:19.682] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:19.685] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:19.686] [INFO] all - Start hand!
+[2014-09-23 11:25:19.687] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:19.715] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:19.718] [INFO] all - doAll by home
+[2014-09-23 11:25:19.721] [INFO] all - End hand!
+[2014-09-23 11:25:20.444] [INFO] all - A new request processing started!
+[2014-09-23 11:25:20.447] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:20.450] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:20.451] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:20.453] [INFO] all - Start hand!
+[2014-09-23 11:25:20.454] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:20.483] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:20.484] [INFO] all - doAll by home
+[2014-09-23 11:25:20.486] [INFO] all - End hand!
+[2014-09-23 11:25:20.691] [INFO] all - A new request processing started!
+[2014-09-23 11:25:20.693] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:20.695] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:20.698] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:20.700] [INFO] all - Start hand!
+[2014-09-23 11:25:20.701] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:20.729] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:20.730] [INFO] all - doAll by home
+[2014-09-23 11:25:20.732] [INFO] all - End hand!
+[2014-09-23 11:25:20.878] [INFO] all - A new request processing started!
+[2014-09-23 11:25:20.881] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:20.882] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:20.883] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:20.884] [INFO] all - Start hand!
+[2014-09-23 11:25:20.888] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:20.918] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:20.920] [INFO] all - doAll by home
+[2014-09-23 11:25:20.922] [INFO] all - End hand!
+[2014-09-23 11:25:21.044] [INFO] all - A new request processing started!
+[2014-09-23 11:25:21.046] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:21.047] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:21.048] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:21.049] [INFO] all - Start hand!
+[2014-09-23 11:25:21.052] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:21.067] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:21.068] [INFO] all - doAll by home
+[2014-09-23 11:25:21.070] [INFO] all - End hand!
+[2014-09-23 11:25:22.426] [INFO] all - A new request processing started!
+[2014-09-23 11:25:22.428] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:22.430] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:22.432] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:22.434] [INFO] all - Start hand!
+[2014-09-23 11:25:22.436] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:22.464] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:22.465] [INFO] all - doAll by home
+[2014-09-23 11:25:22.467] [INFO] all - End hand!
+[2014-09-23 11:25:22.590] [INFO] all - A new request processing started!
+[2014-09-23 11:25:22.593] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:22.595] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:22.597] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:22.601] [INFO] all - Start hand!
+[2014-09-23 11:25:22.603] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:22.624] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:22.625] [INFO] all - doAll by home
+[2014-09-23 11:25:22.626] [INFO] all - End hand!
+[2014-09-23 11:25:22.733] [INFO] all - A new request processing started!
+[2014-09-23 11:25:22.735] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:22.737] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:22.739] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:22.740] [INFO] all - Start hand!
+[2014-09-23 11:25:22.743] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:22.758] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:22.759] [INFO] all - doAll by home
+[2014-09-23 11:25:22.762] [INFO] all - End hand!
+[2014-09-23 11:25:26.041] [INFO] all - A new request processing started!
+[2014-09-23 11:25:26.043] [INFO] all - GET, dispatch the request url : /about, to desturl: /about
+[2014-09-23 11:25:26.048] [INFO] all - 请求【/about】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 11:25:26.051] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 11:25:26.052] [INFO] all - Start hand!
+[2014-09-23 11:25:26.057] [INFO] all - reqestParsed: 
+ pathName: /about 
+ mappedPathName: /about 
+ urlPara: ["/about"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:26.091] [INFO] all - doGet by wiki
+[2014-09-23 11:25:26.119] [INFO] all - End hand!
+[2014-09-23 11:25:28.164] [INFO] all - A new request processing started!
+[2014-09-23 11:25:28.165] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:25:28.166] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:25:28.168] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:25:28.171] [INFO] all - Start hand!
+[2014-09-23 11:25:28.172] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:25:28.192] [INFO] all - 未定义模型：home
+[2014-09-23 11:25:28.192] [INFO] all - doAll by home
+[2014-09-23 11:25:28.194] [INFO] all - End hand!
+[2014-09-23 11:27:59.778] [INFO] all - ##START##上下文初始化！
+[2014-09-23 11:27:59.781] [INFO] all - STEP.1 载入配置
+[2014-09-23 11:27:59.786] [INFO] all - { APP_NAME: 'Node Wiki',
+  PORT: 8086,
+  DIR: 
+   { MODELS: 'models',
+     VIEWS: '../content/themes/start',
+     WIDGETS: '../content/themes/start/widgets',
+     CONTROLLERS: 'controllers',
+     PLUGINS: 'plugins',
+     STATIC: { asserts: '../content/themes/start/asserts' },
+     DATA: '../content/data' },
+  VIEW_SUFFIX: 'html',
+  COOKIE_SECRET: 'node mvc',
+  SESSION_SECRET: 'node mvc',
+  URL_MAPPING: { '^$': '/home', '^(.*)$': '$1' },
+  __ENV: 
+   { ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\node_modules\\cokmvc\\',
+     APP_ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\core' },
+  title: 'CokWiki',
+  'sub-title': 'a tiny wiki based on cokmvc!',
+  cover: null,
+  links: 
+   [ { title: '首页', url: '/' },
+     { title: '全部条目', url: '/wiki/all' },
+     { title: '时间线', url: '/wiki/timeline' },
+     { title: '关于', url: '/wiki/about' } ],
+  auth: { username: 'admin', password: 'dddddd' } }
+[2014-09-23 11:27:59.794] [INFO] all - STEP.2 载入控制器
+[2014-09-23 11:27:59.795] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\】中载入模块！
+[2014-09-23 11:27:59.808] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\error\e404Controller.js】
+[2014-09-23 11:27:59.811] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\homeController.js】
+[2014-09-23 11:27:59.813] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers】中载入模块！
+[2014-09-23 11:27:59.820] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】
+[2014-09-23 11:27:59.825] [INFO] all - STEP.3 载入插件
+[2014-09-23 11:27:59.826] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\】中载入模块！
+[2014-09-23 11:27:59.829] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】
+[2014-09-23 11:27:59.831] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins】中载入模块！
+[2014-09-23 11:27:59.835] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】
+[2014-09-23 11:27:59.840] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】
+[2014-09-23 11:27:59.843] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】
+[2014-09-23 11:27:59.854] [INFO] all - 模块已载入：名称【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】，文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】
+[2014-09-23 11:27:59.857] [INFO] all - ###END###上下文初始化！
+[2014-09-23 11:27:59.877] [INFO] all - Express server listening on port 8086
+[2014-09-23 11:28:00.331] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.338] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.340] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.342] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.345] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.348] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.350] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.352] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.355] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:00.357] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 11:28:46.635] [INFO] all - A new request processing started!
+[2014-09-23 11:28:46.642] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 11:28:46.644] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:28:46.646] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:28:46.647] [INFO] all - Start hand!
+[2014-09-23 11:28:46.649] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:28:46.667] [INFO] all - 未定义模型：home
+[2014-09-23 11:28:46.669] [INFO] all - doAll by home
+[2014-09-23 11:28:46.675] [INFO] all - End hand!
+[2014-09-23 11:30:57.217] [INFO] all - A new request processing started!
+[2014-09-23 11:30:57.229] [INFO] all - GET, dispatch the request url : /home, to desturl: /home
+[2014-09-23 11:30:57.232] [INFO] all - 请求【/home】匹配到控制器【home】, 正则【/^\/home$/i】
+[2014-09-23 11:30:57.235] [INFO] all - HandlerName : home is initing
+[2014-09-23 11:30:57.236] [INFO] all - Start hand!
+[2014-09-23 11:30:57.238] [INFO] all - reqestParsed: 
+ pathName: /home 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:30:57.259] [INFO] all - 未定义模型：home
+[2014-09-23 11:30:57.263] [INFO] all - doAll by home
+[2014-09-23 11:30:57.268] [INFO] all - End hand!
+[2014-09-23 11:38:21.664] [INFO] all - A new request processing started!
+[2014-09-23 11:38:21.672] [INFO] all - GET, dispatch the request url : /hxxx, to desturl: /hxxx
+[2014-09-23 11:38:21.674] [INFO] all - 请求【/hxxx】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 11:38:21.676] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 11:38:21.678] [INFO] all - Start hand!
+[2014-09-23 11:38:21.679] [INFO] all - reqestParsed: 
+ pathName: /hxxx 
+ mappedPathName: /hxxx 
+ urlPara: ["/hxxx"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 11:38:21.716] [INFO] all - doGet by wiki
+[2014-09-23 11:38:21.732] [INFO] all - End hand!
+[2014-09-23 15:45:50.600] [INFO] all - ##START##上下文初始化！
+[2014-09-23 15:45:50.604] [INFO] all - STEP.1 载入配置
+[2014-09-23 15:45:50.609] [INFO] all - { APP_NAME: 'Node Wiki',
+  PORT: 8086,
+  FAVICON: 'favicon.ico',
+  DIR: 
+   { MODELS: 'models',
+     VIEWS: '../content/themes/start',
+     WIDGETS: '../content/themes/start/widgets',
+     CONTROLLERS: 'controllers',
+     PLUGINS: 'plugins',
+     STATIC: { asserts: '../content/themes/start/asserts' },
+     DATA: '../content/data' },
+  VIEW_SUFFIX: 'html',
+  COOKIE_SECRET: 'node mvc',
+  SESSION_SECRET: 'node mvc',
+  URL_MAPPING: { '^$': '/home', '^(.*)$': '$1' },
+  __ENV: 
+   { ROOT: 'D:\\Node\\Workspace\\cokmvc\\',
+     APP_ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\core' },
+  title: 'CokWiki',
+  'sub-title': 'a tiny wiki based on cokmvc!',
+  cover: null,
+  links: 
+   [ { title: '首页', url: '/' },
+     { title: '全部条目', url: '/wiki/all' },
+     { title: '时间线', url: '/wiki/timeline' },
+     { title: '关于', url: '/wiki/about' } ],
+  auth: { username: 'admin', password: 'dddddd' } }
+[2014-09-23 15:45:50.620] [INFO] all - STEP.2 载入控制器
+[2014-09-23 15:45:50.622] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\core\controllers\】中载入模块！
+[2014-09-23 15:45:50.628] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers】中载入模块！
+[2014-09-23 15:45:50.631] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】
+[2014-09-23 15:45:50.632] [INFO] all - STEP.3 载入插件
+[2014-09-23 15:45:50.633] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\core\plugins\】中载入模块！
+[2014-09-23 15:45:50.636] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\core\plugins\modelMappingPlugin.js】
+[2014-09-23 15:45:50.637] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins】中载入模块！
+[2014-09-23 15:45:50.640] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】
+[2014-09-23 15:45:50.642] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】
+[2014-09-23 15:45:50.645] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】
+[2014-09-23 15:45:50.652] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】
+[2014-09-23 15:45:50.655] [INFO] all - ###END###上下文初始化！
+[2014-09-23 15:45:50.672] [INFO] all - Express server listening on port 8086
+[2014-09-23 15:45:51.130] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.131] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.133] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.134] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.136] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.137] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.138] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.139] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.140] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:51.142] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 15:45:57.929] [INFO] all - A new request processing started!
+[2014-09-23 15:45:57.933] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 15:45:57.935] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 15:45:57.937] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 15:45:57.938] [INFO] all - Start hand!
+[2014-09-23 15:45:57.940] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 15:45:57.980] [INFO] all - doGet by wiki
+[2014-09-23 15:45:58.017] [INFO] all - End hand!
+[2014-09-23 15:46:16.079] [INFO] all - A new request processing started!
+[2014-09-23 15:46:16.082] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 15:46:16.084] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 15:46:16.086] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 15:46:16.096] [INFO] all - Start hand!
+[2014-09-23 15:46:16.098] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 15:46:16.101] [INFO] all - doGet by wiki
+[2014-09-23 15:46:16.135] [INFO] all - End hand!
+[2014-09-23 16:06:34.944] [INFO] all - ##START##上下文初始化！
+[2014-09-23 16:06:34.948] [INFO] all - STEP.1 载入配置
+[2014-09-23 16:06:34.953] [INFO] all - { APP_NAME: 'Node Wiki',
+  PORT: 8086,
+  FAVICON: 'favicon.ico',
+  DIR: 
+   { MODELS: 'models',
+     VIEWS: '../content/themes/start',
+     WIDGETS: '../content/themes/start/widgets',
+     CONTROLLERS: 'controllers',
+     PLUGINS: 'plugins',
+     STATIC: { asserts: '../content/themes/start/asserts' },
+     DATA: '../content/data' },
+  VIEW_SUFFIX: 'html',
+  COOKIE_SECRET: 'node mvc',
+  SESSION_SECRET: 'node mvc',
+  URL_MAPPING: { '^$': '/home', '^(.*)$': '$1' },
+  __ENV: 
+   { ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\node_modules\\cokmvc\\',
+     APP_ROOT: 'D:\\Node\\Workspace\\cokmvc\\examples\\wiki\\core' },
+  title: 'CokWiki',
+  'sub-title': 'a tiny wiki based on cokmvc!',
+  cover: null,
+  links: 
+   [ { title: '首页', url: '/' },
+     { title: '全部条目', url: '/wiki/all' },
+     { title: '时间线', url: '/wiki/timeline' },
+     { title: '关于', url: '/wiki/about' } ],
+  auth: { username: 'admin', password: 'dddddd' } }
+[2014-09-23 16:06:34.962] [INFO] all - STEP.2 载入控制器
+[2014-09-23 16:06:34.965] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\controllers\】中载入模块！
+[2014-09-23 16:06:34.972] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers】中载入模块！
+[2014-09-23 16:06:34.975] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\error\e404Controller.js】
+[2014-09-23 16:06:34.977] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\controllers\wikiController.js】
+[2014-09-23 16:06:34.979] [INFO] all - STEP.3 载入插件
+[2014-09-23 16:06:34.980] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\】中载入模块！
+[2014-09-23 16:06:34.984] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\node_modules\cokmvc\core\plugins\modelMappingPlugin.js】
+[2014-09-23 16:06:34.985] [INFO] all - 从文件夹【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins】中载入模块！
+[2014-09-23 16:06:34.988] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\authPlugin.js】
+[2014-09-23 16:06:34.990] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\metaPlugin.js】
+[2014-09-23 16:06:34.992] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\pagePlugin.js】
+[2014-09-23 16:06:35.022] [INFO] all - 模块已载入：文件【D:\Node\Workspace\cokmvc\examples\wiki\core\plugins\widgetPlugin.js】
+[2014-09-23 16:06:35.024] [INFO] all - ###END###上下文初始化！
+[2014-09-23 16:06:35.041] [INFO] all - Express server listening on port 8086
+[2014-09-23 16:06:35.483] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.485] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.486] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.487] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.488] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.490] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.491] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.492] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.494] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:35.496] [INFO] all - 文件【D:\Node\Workspace\cokmvc\examples\wiki\content\data\index.json】已保存！
+[2014-09-23 16:06:38.371] [INFO] all - A new request processing started!
+[2014-09-23 16:06:38.375] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 16:06:38.377] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:06:38.379] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:06:38.381] [INFO] all - Start hand!
+[2014-09-23 16:06:38.383] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:06:38.420] [INFO] all - doGet by wiki
+[2014-09-23 16:06:38.452] [INFO] all - End hand!
+[2014-09-23 16:07:00.474] [INFO] all - A new request processing started!
+[2014-09-23 16:07:00.477] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 16:07:00.478] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:07:00.480] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:07:00.488] [INFO] all - Start hand!
+[2014-09-23 16:07:00.489] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:07:00.494] [INFO] all - doGet by wiki
+[2014-09-23 16:07:00.517] [INFO] all - End hand!
+[2014-09-23 16:07:04.897] [INFO] all - A new request processing started!
+[2014-09-23 16:07:04.900] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 16:07:04.901] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:07:04.904] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:07:04.907] [INFO] all - Start hand!
+[2014-09-23 16:07:04.909] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:07:04.913] [INFO] all - doGet by wiki
+[2014-09-23 16:07:04.923] [INFO] all - End hand!
+[2014-09-23 16:07:20.023] [INFO] all - A new request processing started!
+[2014-09-23 16:07:20.024] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 16:07:20.026] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:07:20.027] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:07:20.029] [INFO] all - Start hand!
+[2014-09-23 16:07:20.030] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:07:20.032] [INFO] all - doGet by wiki
+[2014-09-23 16:07:20.044] [INFO] all - End hand!
+[2014-09-23 16:07:22.784] [INFO] all - A new request processing started!
+[2014-09-23 16:07:22.787] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 16:07:22.790] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:07:22.793] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:07:22.794] [INFO] all - Start hand!
+[2014-09-23 16:07:22.796] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:07:22.799] [INFO] all - doGet by wiki
+[2014-09-23 16:07:22.808] [INFO] all - End hand!
+[2014-09-23 16:37:25.681] [INFO] all - A new request processing started!
+[2014-09-23 16:37:25.683] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 16:37:25.684] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 16:37:25.686] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 16:37:25.687] [INFO] all - Start hand!
+[2014-09-23 16:37:25.688] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 16:37:25.691] [INFO] all - doGet by wiki
+[2014-09-23 16:37:25.696] [INFO] all - End hand!
+[2014-09-23 17:17:38.537] [INFO] all - A new request processing started!
+[2014-09-23 17:17:38.540] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 17:17:38.542] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:17:38.545] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:17:38.546] [INFO] all - Start hand!
+[2014-09-23 17:17:38.547] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:17:38.558] [INFO] all - doGet by wiki
+[2014-09-23 17:17:38.572] [INFO] all - End hand!
+[2014-09-23 17:17:38.986] [INFO] all - A new request processing started!
+[2014-09-23 17:17:38.989] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 17:17:38.992] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:17:38.994] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:17:38.996] [INFO] all - Start hand!
+[2014-09-23 17:17:38.999] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:17:39.007] [INFO] all - doGet by wiki
+[2014-09-23 17:17:39.018] [INFO] all - End hand!
+[2014-09-23 17:17:46.131] [INFO] all - A new request processing started!
+[2014-09-23 17:17:46.134] [INFO] all - GET, dispatch the request url : /home, to desturl: /home
+[2014-09-23 17:17:46.136] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:17:46.140] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:17:46.148] [INFO] all - Start hand!
+[2014-09-23 17:17:46.150] [INFO] all - reqestParsed: 
+ pathName: /home 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {"oper":"edit"} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:17:46.154] [INFO] all - doGet by wiki
+[2014-09-23 17:17:46.191] [INFO] all - End hand!
+[2014-09-23 17:17:52.274] [INFO] all - A new request processing started!
+[2014-09-23 17:17:52.277] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 17:17:52.280] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:17:52.283] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:17:52.284] [INFO] all - Start hand!
+[2014-09-23 17:17:52.292] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:17:52.296] [INFO] all - doGet by wiki
+[2014-09-23 17:17:52.305] [INFO] all - End hand!
+[2014-09-23 17:21:40.051] [INFO] all - A new request processing started!
+[2014-09-23 17:21:40.052] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 17:21:40.053] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:21:40.055] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:21:40.055] [INFO] all - Start hand!
+[2014-09-23 17:21:40.056] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:21:40.059] [INFO] all - doGet by wiki
+[2014-09-23 17:21:40.070] [INFO] all - End hand!
+[2014-09-23 17:21:41.178] [INFO] all - A new request processing started!
+[2014-09-23 17:21:41.181] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 17:21:41.183] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:21:41.186] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:21:41.187] [INFO] all - Start hand!
+[2014-09-23 17:21:41.189] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:21:41.192] [INFO] all - doGet by wiki
+[2014-09-23 17:21:41.214] [INFO] all - End hand!
+[2014-09-23 17:23:17.529] [INFO] all - A new request processing started!
+[2014-09-23 17:23:17.531] [INFO] all - GET, dispatch the request url : /wiki/all, to desturl: /wiki/all
+[2014-09-23 17:23:17.532] [INFO] all - 请求【/wiki/all】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:23:17.536] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:23:17.538] [INFO] all - Start hand!
+[2014-09-23 17:23:17.541] [INFO] all - reqestParsed: 
+ pathName: /wiki/all 
+ mappedPathName: /wiki/all 
+ urlPara: ["/wiki/all"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:23:17.546] [INFO] all - doGet by wiki
+[2014-09-23 17:23:17.554] [INFO] all - End hand!
+[2014-09-23 17:23:39.378] [INFO] all - A new request processing started!
+[2014-09-23 17:23:39.379] [INFO] all - GET, dispatch the request url : /wiki/tags/plugin, to desturl: /wiki/tags/plugin
+[2014-09-23 17:23:39.380] [INFO] all - 请求【/wiki/tags/plugin】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:23:39.382] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:23:39.383] [INFO] all - Start hand!
+[2014-09-23 17:23:39.385] [INFO] all - reqestParsed: 
+ pathName: /wiki/tags/plugin 
+ mappedPathName: /wiki/tags/plugin 
+ urlPara: ["/wiki/tags/plugin"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:23:39.387] [INFO] all - doGet by wiki
+[2014-09-23 17:23:39.394] [INFO] all - End hand!
+[2014-09-23 17:30:50.988] [INFO] all - A new request processing started!
+[2014-09-23 17:30:50.989] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 17:30:50.990] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:30:50.991] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:30:50.992] [INFO] all - Start hand!
+[2014-09-23 17:30:50.992] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:30:50.995] [INFO] all - doGet by wiki
+[2014-09-23 17:30:51.003] [INFO] all - End hand!
+[2014-09-23 17:30:55.831] [INFO] all - A new request processing started!
+[2014-09-23 17:30:55.833] [INFO] all - GET, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:30:55.834] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:30:55.836] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:30:55.838] [INFO] all - Start hand!
+[2014-09-23 17:30:55.839] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:30:55.842] [INFO] all - doGet by wiki
+[2014-09-23 17:30:55.856] [INFO] all - End hand!
+[2014-09-23 17:30:57.569] [INFO] all - A new request processing started!
+[2014-09-23 17:30:57.572] [INFO] all - GET, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:30:57.572] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:30:57.574] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:30:57.575] [INFO] all - Start hand!
+[2014-09-23 17:30:57.577] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {"oper":"edit"} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:30:57.581] [INFO] all - doGet by wiki
+[2014-09-23 17:30:57.615] [INFO] all - End hand!
+[2014-09-23 17:31:02.200] [INFO] all - A new request processing started!
+[2014-09-23 17:31:02.201] [INFO] all - POST, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:31:02.204] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:02.206] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:02.208] [INFO] all - Start hand!
+[2014-09-23 17:31:02.209] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {"oper":"edit"} 
+ body: {"username":"admin","password":"dddddd"} 
+ params: {} 
+ 
+[2014-09-23 17:31:02.210] [INFO] all - goPost by wiki
+[2014-09-23 17:31:02.218] [INFO] all - End hand!
+[2014-09-23 17:31:27.543] [INFO] all - A new request processing started!
+[2014-09-23 17:31:27.545] [INFO] all - GET, dispatch the request url : /asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png, to desturl: /asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png
+[2014-09-23 17:31:27.546] [INFO] all - 请求【/asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:27.548] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:27.549] [INFO] all - Start hand!
+[2014-09-23 17:31:27.550] [INFO] all - reqestParsed: 
+ pathName: /asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png 
+ mappedPathName: /asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png 
+ urlPara: ["/asserts/libs/EpicEditor//images/modules/pulls/dirty-shade.png"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:31:27.554] [INFO] all - doGet by wiki
+[2014-09-23 17:31:27.561] [INFO] all - End hand!
+[2014-09-23 17:31:31.888] [INFO] all - A new request processing started!
+[2014-09-23 17:31:31.890] [INFO] all - POST, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:31:31.891] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:31.892] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:31.895] [INFO] all - Start hand!
+[2014-09-23 17:31:31.896] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {} 
+ body: {"source":"---\r\ntitle: playground\r\ntags: test\r\n---\r\n\r\nrider [![NPM version](https://badge.fury.io/js/rider.png)](https://npmjs.org/package/rider) [![Build Status](https://travis-ci.org/ecomfe/rider.png)](https://travis-ci.org/ecomfe/rider) [![DevDependencies Status](https://david-dm.org/ecomfe/rider/dev-status.png)](https://david-dm.org/ecomfe/rider#info=devDependencies)\r\n\r\n"} 
+ params: {} 
+ 
+[2014-09-23 17:31:31.899] [INFO] all - goPost by wiki
+[2014-09-23 17:31:31.913] [INFO] all - End hand!
+[2014-09-23 17:31:39.341] [INFO] all - A new request processing started!
+[2014-09-23 17:31:39.343] [INFO] all - GET, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:31:39.345] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:39.347] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:39.349] [INFO] all - Start hand!
+[2014-09-23 17:31:39.352] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {"oper":"edit"} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:31:39.355] [INFO] all - doGet by wiki
+[2014-09-23 17:31:39.360] [INFO] all - End hand!
+[2014-09-23 17:31:43.422] [INFO] all - A new request processing started!
+[2014-09-23 17:31:43.424] [INFO] all - GET, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:31:43.426] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:43.428] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:43.429] [INFO] all - Start hand!
+[2014-09-23 17:31:43.431] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:31:43.435] [INFO] all - doGet by wiki
+[2014-09-23 17:31:43.443] [INFO] all - End hand!
+[2014-09-23 17:31:49.959] [INFO] all - A new request processing started!
+[2014-09-23 17:31:49.961] [INFO] all - GET, dispatch the request url : /playground, to desturl: /playground
+[2014-09-23 17:31:49.962] [INFO] all - 请求【/playground】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:31:49.965] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:31:49.966] [INFO] all - Start hand!
+[2014-09-23 17:31:49.968] [INFO] all - reqestParsed: 
+ pathName: /playground 
+ mappedPathName: /playground 
+ urlPara: ["/playground"] 
+ query: {"oper":"edit"} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:31:49.972] [INFO] all - doGet by wiki
+[2014-09-23 17:31:49.979] [INFO] all - End hand!
+[2014-09-23 17:40:43.826] [INFO] all - A new request processing started!
+[2014-09-23 17:40:43.828] [INFO] all - GET, dispatch the request url : /, to desturl: /home
+[2014-09-23 17:40:43.830] [INFO] all - 请求【/home】匹配到控制器【wiki】, 正则【/^\/.*/i】
+[2014-09-23 17:40:43.831] [INFO] all - HandlerName : wiki is initing
+[2014-09-23 17:40:43.832] [INFO] all - Start hand!
+[2014-09-23 17:40:43.834] [INFO] all - reqestParsed: 
+ pathName: / 
+ mappedPathName: /home 
+ urlPara: ["/home"] 
+ query: {} 
+ body: {} 
+ params: {} 
+ 
+[2014-09-23 17:40:43.836] [INFO] all - doGet by wiki
+[2014-09-23 17:40:43.843] [INFO] all - End hand!
