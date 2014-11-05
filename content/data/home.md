@@ -1,4 +1,4 @@
----
+﻿---
 title: 首页
 tags: PAGE
 ---
@@ -8,4 +8,4 @@ tags: PAGE
 
 ![麻烦][1]
 
-[1]:http://wiki.heichengliang.me/_media/mafan.png "麻烦"
+[1]:http://cokwiki.qiniudn.com/mafan.png "麻烦"
