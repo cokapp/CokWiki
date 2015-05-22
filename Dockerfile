@@ -7,7 +7,7 @@ RUN mkdir /root/workspace
 ADD ./ /root/workspace/cokwiki
 
 WORKDIR /root/workspace/cokwiki
-RUN npm instll
+RUN npm install
 
 EXPOSE 8086
 CMD ["node", "app.js"]
