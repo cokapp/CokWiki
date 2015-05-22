@@ -117,7 +117,7 @@ var Model = Class.extend({
 
   				var tagmap = _this.db('tagmap').find({
   					tag: tag
-  				}).value();
+  				});
 
   				if(typeof tagmap == undefined || tagmap == null){
 			  		_this.db('tagmap').push({

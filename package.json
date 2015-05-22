@@ -9,13 +9,13 @@
     },
     "main": "index",
     "dependencies": {
-        "cokmvc": "latest",
-        "ejs": "latest",
-        "js-yaml": "latest",
-        "xfs": "latest",
-        "lowdb": "latest",
-        "showdown": "latest",
-        "moment": "latest"
+        "cokmvc": "0.1.0",
+        "ejs": "2.3.1",
+        "js-yaml": "3.3.1",
+        "xfs": "0.1.10",
+        "lowdb": "0.7.3",
+        "showdown": "1.0.0-alpha.2",
+        "moment": "2.10.3"
     },
     "repository": "git://github.com/cokapp/nodemvc",
     "engines": { "node": "*" }

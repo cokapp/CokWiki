@@ -3,7 +3,7 @@ var yml = require('../lib/yml'),
     Showdown = require('showdown'),
     moment = require('moment'),
     ghostgfm = require('../lib/showdown/extensions/ghostgfm'),
-    converter = new Showdown.converter({
+    converter = new Showdown.Converter({
         extensions: [ghostgfm]
     });
 

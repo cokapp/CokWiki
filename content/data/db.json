@@ -27,7 +27,9 @@
     {
       "url": "/home",
       "meta": {
-        "_content": "﻿---\r\ntitle: 首页\r\ntags: PAGE\r\n---\n"
+        "title": "首页",
+        "tags": "PAGE",
+        "_content": ""
       }
     },
     {
@@ -97,6 +99,13 @@
       ]
     },
     {
+      "tag": "PAGE",
+      "urls": [
+        "/home",
+        "/wiki/about"
+      ]
+    },
+    {
       "tag": "test",
       "urls": [
         "/playground"
@@ -106,12 +115,6 @@
       "tag": "test playground",
       "urls": [
         "/test"
-      ]
-    },
-    {
-      "tag": "PAGE",
-      "urls": [
-        "/wiki/about"
       ]
     },
     {
